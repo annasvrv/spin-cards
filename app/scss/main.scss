@@ -1,0 +1,18 @@
+@use 'sass:math';
+
+@import "vars";
+@import "fonts";
+@import "libs";
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+
+	overflow-x: hidden;
+
+}
+
+// ALWAYS END
+@import "media";
