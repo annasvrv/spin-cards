@@ -1,4 +1,9 @@
-@import "_mixins/font-face";
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Saira'), url('../fonts/Saira/Saira-Bold.woff2') format('woff2'),
+  url('../fonts/Saira/Saira-Bold.woff') format('woff');
+}

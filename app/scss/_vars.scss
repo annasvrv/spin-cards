@@ -1,0 +1,62 @@
+
+// Colors
+
+$stb-neutral-100: rgb(233 238 255); // #E9EEFF
+$stb-neutral-150: rgb(208 215 255); // #D0D7FF
+$stb-neutral-200: rgb(184 195 255); // #B8C3FF
+$stb-neutral-900: rgb(69 76 139); // #454C8B
+$stb-brand-200: rgb(138 67 232); // #8A43E8
+$stb-brand-350: rgb(109 131 245); // #6D83F5
+$stb-green: rgb(70, 243, 129); // #46F381
+$stb-green-30: rgba(70, 243, 129, 0.30); // #46F381FF
+$stb-green-15: rgba(70, 243, 129, 0.15); // #46F38126
+$stb-green-00: rgba(70, 243, 129, 0.00); // #46F38100
+$stb-green-600: rgb(22 172 127); // #16AC7F
+$stb-yellow: rgb(255, 201, 64); // #FFC940
+$stb-yellow-30: rgba(255, 201, 64, 0.30); // #FFC9404C
+$stb-yellow-20: rgba(255, 201, 64, 0.20); // #FFC94033
+$stb-yellow-07: rgba(255, 201, 64, 0.07); // #FFC94011
+$stb-yellow-00: rgba(255, 201, 64, 0.00); // #FFC94000
+$stb-red-500: rgb(217 41 94); // #D9295E
+
+
+// Gradients
+
+$stb-gradient-50: linear-gradient(
+                180deg,
+                rgb(var($stb-neutral-100)) 0%,
+                rgb(var($stb-neutral-150)) 100%);
+
+$radial-gradient-green: radial-gradient(
+                50% 50% at 50% 50%,
+                rgb(var($stb-green-30)) 0%,
+                rgb(var($stb-green-15)) 61.29%,
+                rgb(var($stb-green-00)) 100%);
+
+$radial-gradient-yellow: radial-gradient(
+                50% 50% at 50% 50%,
+                rgb(var($stb-yellow-30)) 0%,
+                rgb(var($stb-yellow-20)) 42%,
+                rgb(var($stb-yellow-07)) 78.24%,
+                rgb(var($stb-yellow-00)) 100%);
+
+
+// Background
+
+$stb-bg-primary: rgb(var($stb-neutral-200)); // #B8C3FF
+$stb-bg-secondary: rgb(var($stb-neutral-150)) ; // #D0D7FF
+
+// Text
+
+$stb-text-primary: rgb(var($stb-neutral-900));  // #454C8B
+$stb-link-accent: rgb(var($stb-red-500)); // #D9295E
+
+// Font size
+
+$stb-text-28: 28px;
+$stb-text-16: 16px;
+$stb-text-12: 12px;
+
+$stb-line-120: 1.2;
+$stb-line-130: 1.3;
+
