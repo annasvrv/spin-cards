@@ -9,18 +9,29 @@
   text-align: center;
 }
 
+.text-700 {
+  font-weight: 700;
+}
+
+.text-800 {
+  font-weight: 800;
+}
+
 .text-28-32 {
   font-size: $stb-text-28;
-  line-height: $stb-line-120;
+
 
   @include desk-s {
     font-size: $stb-text-32;
   }
 }
 
+.leading-120 {
+  line-height: $stb-line-120;
+}
+
 .text-16-20 {
   font-size: $stb-text-16;
-  line-height: $stb-line-120;
 
   @include desk-l {
     font-size: $stb-text-20;
@@ -29,22 +40,34 @@
 
 .text-12-14 {
   font-size: $stb-text-12;
-  line-height: $stb-line-130;
+
 
   @include desk-l {
     font-size: $stb-text-14;
+  }
+}
+
+.leading-130-140 {
+  line-height: $stb-line-130;
+
+  @include desk-l {
     line-height: $stb-line-140;
   }
 }
 
 .label-12-14 {
   font-size: $stb-text-12;
-  line-height: $stb-line-130;
 
   @include desk-s {
     font-size: $stb-text-14;
+  }
+}
+
+.leading-130-110 {
+  line-height: $stb-line-130;
+
+  @include desk-s {
     line-height: $stb-line-110;
-    font-weight: 800;
   }
 }
 

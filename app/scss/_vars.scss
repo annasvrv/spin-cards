@@ -29,9 +29,9 @@ $stb-gradient-50: linear-gradient(
 
 $radial-gradient-green: radial-gradient(
                 50% 50% at 50% 50%,
-                rgb(var($stb-green-30)) 0%,
-                rgb(var($stb-green-15)) 61.29%,
-                rgb(var($stb-green-00)) 100%);
+                $stb-green-30 0%,
+                $stb-green-15 61.29%,
+                $stb-green-00 100%);
 
 $radial-gradient-yellow: radial-gradient(
                 50% 50% at 50% 50%,
