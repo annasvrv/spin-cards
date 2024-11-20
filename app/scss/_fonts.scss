@@ -7,3 +7,12 @@
   src: local('Saira'), url('../fonts/Saira/Saira-Bold.woff2') format('woff2'),
   url('../fonts/Saira/Saira-Bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Saira'), url('../fonts/Saira/Saira-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Saira/Saira-ExtraBold.woff') format('woff');
+}

@@ -1,2 +1,43 @@
 @import "vars";
 
+@mixin mob-s {
+  @media (min-width: map-get($breakpoints, "mob-s")) {
+    @content;
+  }
+}
+
+@mixin mob-m {
+  @media (min-width: map-get($breakpoints, "mob-m")) {
+    @content;
+  }
+}
+
+@mixin tab-s {
+  @media (min-width: map-get($breakpoints, "tab-s")) {
+    @content;
+  }
+}
+
+@mixin desk-s {
+  @media (min-width: map-get($breakpoints, "desk-s")) {
+    @content;
+  }
+}
+
+@mixin desk-m {
+  @media (min-width: map-get($breakpoints, "desk-m")) {
+    @content;
+  }
+}
+
+@mixin desk-l {
+  @media (min-width: map-get($breakpoints, "desk-l")) {
+    @content;
+  }
+}
+
+@mixin desk-xl {
+  @media (min-width: map-get($breakpoints, "desk-xl")) {
+    @content;
+  }
+}

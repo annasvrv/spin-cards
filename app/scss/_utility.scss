@@ -1,0 +1,51 @@
+@import "vars";
+@import "media";
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-28-32 {
+  font-size: $stb-text-28;
+  line-height: $stb-line-120;
+
+  @include desk-s {
+    font-size: $stb-text-32;
+  }
+}
+
+.text-16-20 {
+  font-size: $stb-text-16;
+  line-height: $stb-line-120;
+
+  @include desk-l {
+    font-size: $stb-text-20;
+  }
+}
+
+.text-12-14 {
+  font-size: $stb-text-12;
+  line-height: $stb-line-130;
+
+  @include desk-l {
+    font-size: $stb-text-14;
+    line-height: $stb-line-140;
+  }
+}
+
+.label-12-14 {
+  font-size: $stb-text-12;
+  line-height: $stb-line-130;
+
+  @include desk-s {
+    font-size: $stb-text-14;
+    line-height: $stb-line-110;
+    font-weight: 800;
+  }
+}
+
+
