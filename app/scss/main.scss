@@ -127,10 +127,6 @@ body {
 		&__background {
 			width: 100%;
 			object-fit: cover;
-
-			@include mob-m {
-
-			}
 		}
 
 		.promo-img {
