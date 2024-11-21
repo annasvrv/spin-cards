@@ -1,166 +1,192 @@
-@use 'sass:math';
+@use "sass:math";
 
 @import "vars";
 @import "fonts";
 @import "media";
 @import "utility";
-@import "libs";
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  display: block;
 }
 
 body {
-	min-height: 100vh;
-	min-width: 360px;
-	font-family: Saira, sans-serif;
-	font-size: 16px;
-	line-height: 1.3;
-	position: relative;
-	overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 360px;
+  font-family: Saira, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .promotion {
-	padding: 28px 20px;
-	background-color: $stb-bg-primary;
-	//background-image: radial-gradient(50% 50% at 50% 50%, $stb-green-30 0%, $stb-green-15 61.29%, $stb-green-00 100%), radial-gradient(
-	//								50% 50% at 50% 50%,
-	//								$stb-yellow-30 0%,
-	//								$stb-yellow-20 42%,
-	//								$stb-yellow-07 78.24%,
-	//								$stb-yellow-00 100%);
-	//background-size: 1367px 1367px, 1234px 1234px;
-	//background-repeat: no-repeat;
-	//background-position: top -684px left -200px, top -617px right -400px;
+  padding: 28px 20px;
+  background-color: $stb-bg-primary;
+  //background-image: radial-gradient(50% 50% at 50% 50%, $stb-green-30 0%, $stb-green-15 61.29%, $stb-green-00 100%), radial-gradient(
+  //								50% 50% at 50% 50%,
+  //								$stb-yellow-30 0%,
+  //								$stb-yellow-20 42%,
+  //								$stb-yellow-07 78.24%,
+  //								$stb-yellow-00 100%);
+  //background-size: 1367px 1367px, 1234px 1234px;
+  //background-repeat: no-repeat;
+  //background-position: top -684px left -200px, top -617px right -400px;
 
-	&__title {
-		margin-bottom: 28px;
-		text-transform: uppercase;
-		color: $stb-text-primary;
-	}
+  &__title {
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    color: $stb-text-primary;
+  }
 
-	&__list {
-		margin: 0 auto;
-		max-width: 1264px;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
-		justify-items: center;
-		grid-gap: 12px;
-	}
+  &__list {
+    margin: 0 auto;
+    max-width: 1264px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
+    justify-items: center;
+    grid-gap: 12px;
+  }
 }
 
 .promo {
-	display: block;
-	position: relative;
-	z-index: 0;
+  display: block;
+  border-radius: $border-r-xl;
+  border: 1px solid transparent;
+  background: linear-gradient(
+      to bottom,
+      $stb-neutral-100 0%,
+      $stb-neutral-150 100%
+    )
+    border-box;
 
-	&:before {
-		content: "";
-		position: absolute;
-		top: -1px;
-		left: -1px;
-		right: -1px;
-		bottom: -1px;
-		border-radius: $border-r-xl;
-		padding: 1px;
-		background: linear-gradient(to bottom,
-						$stb-neutral-100 0%,
-						$stb-neutral-150 100%);
-		--webkit-mask:
-						linear-gradient($stb-neutral-100 0 0) content-box,
-						linear-gradient($stb-neutral-150 0 0);
-		-webkit-mask-composite: destination-out;
-		mask-composite: exclude;
-		z-index: -1;
-	}
+  &__card {
+    position: relative;
+    max-width: 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    padding: 4px;
+    background: $stb-bg-secondary;
+    border-radius: $border-r-xl;
+  }
 
-	&__card {
-		max-width: 312px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 4px;
-		background: $stb-bg-secondary;
-		border-radius: $border-r-xl;
+  &__label {
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    right: 4px;
+  }
 
-		.label {
-			padding-inline: 8px;
-			text-transform: uppercase;
-			letter-spacing: 0.14px;
-			border-radius: 0 10px 0 8px;
-			background-color: $stb-bg-secondary;
-			position: absolute;
-			z-index: 1;
-			right: 4px;
+  &__picture-wrapper {
+    width: 100%;
+    // height: 193px;
+    border: 1px solid #c12c2c;
+    border-radius: $border-r-l;
+    overflow: hidden;
+    position: relative;
 
-			&--casino {
-				color: $stb-green-600;
-			}
+    &__background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      //   display: block;
+    }
 
-			&--sport {
-				color: $stb-brand-350;
-			}
+    .promo-img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-			&--special {
-				color: $stb-brand-200;
-			}
-		}
-	}
+  &__plate {
+    padding: 6px 16px;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    height: 100%;
+  }
 
-	&__picture-wrapper {
-		border-radius: $border-r-l;
-		overflow: hidden;
-		flex-shrink: 0;
-		position: relative;
+  &__plate-title {
+    color: $stb-text-primary;
+  }
 
-		&__background {
-			width: 100%;
-			object-fit: cover;
-		}
+  &__plate-link {
+    align-self: end;
+  }
+}
 
-		.promo-img {
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			object-fit: cover;
-			width: 100%;
-		}
-	}
+// Components
 
-	&__plate {
-		margin-top: 4px;
-		padding: 6px 16px;
-		width: 100%;
-	}
+.label {
+  padding-inline: 8px;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $stb-text-12;
+  line-height: $stb-line-130;
+  letter-spacing: 0.14px;
+  border-radius: 0 10px 0 8px;
+  background-color: $stb-bg-secondary;
 
-	&__plate-title {
-		color: $stb-text-primary;
-		margin-bottom: $margin-m;
-	}
+  @include desk-s {
+    font-size: $stb-text-14;
+    line-height: $stb-line-110;
+  }
 
-	.link {
-		display: flex;
-		gap: 4px;
-		align-items: stretch;
-		justify-content: end;
-		color: $stb-link-accent;
-		text-transform: uppercase;
+  &--casino {
+    color: $stb-green-600;
+  }
 
-		.icon-arrow {
-			display: block;
-			flex-shrink: 0;
-		}
-	}
+  &--sport {
+    color: $stb-brand-350;
+  }
+
+  &--special {
+    color: $stb-brand-200;
+  }
+}
+
+.link {
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: stretch;
+  grid-column-gap: 4px;
+  color: $stb-link-accent;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: $stb-text-12;
+  line-height: $stb-line-130;
+
+  @include desk-l {
+    font-size: $stb-text-14;
+    line-height: $stb-line-140;
+  }
+
+  .icon-arrow {
+    display: block;
+    flex-shrink: 0;
+  }
 }
