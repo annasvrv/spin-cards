@@ -20,8 +20,11 @@
 .text-28-32 {
   font-size: $stb-text-28;
 
-
   @include desk-s {
+    font-size: $stb-text-32;
+  }
+
+  @include desk-l {
     font-size: $stb-text-32;
   }
 }
@@ -40,7 +43,6 @@
 
 .text-12-14 {
   font-size: $stb-text-12;
-
 
   @include desk-l {
     font-size: $stb-text-14;
@@ -70,5 +72,3 @@
     line-height: $stb-line-110;
   }
 }
-
-

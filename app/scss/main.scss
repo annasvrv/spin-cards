@@ -6,9 +6,18 @@
 @import "utility";
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 a {
@@ -26,29 +35,84 @@ picture {
 }
 
 body {
+  margin: 0 auto;
   min-height: 100vh;
   min-width: 360px;
   font-family: Saira, sans-serif;
   font-size: 16px;
   line-height: 1.3;
-  position: relative;
   overflow-x: hidden;
+  background-color: $stb-bg-primary;
+}
+
+.container {
+  padding: 28px 20px;
 }
 
 .promotion {
-  padding: 28px 20px;
-  background-color: $stb-bg-primary;
-  //background-image: radial-gradient(50% 50% at 50% 50%, $stb-green-30 0%, $stb-green-15 61.29%, $stb-green-00 100%), radial-gradient(
-  //								50% 50% at 50% 50%,
-  //								$stb-yellow-30 0%,
-  //								$stb-yellow-20 42%,
-  //								$stb-yellow-07 78.24%,
-  //								$stb-yellow-00 100%);
-  //background-size: 1367px 1367px, 1234px 1234px;
-  //background-repeat: no-repeat;
-  //background-position: top -684px left -200px, top -617px right -400px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 auto;
+    margin: auto;
+    width: 800px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mob-s {
+    }
+
+    @include mob-m {
+      //   max-width: 1000px;
+      //   width: 100%;
+      width: 200px;
+    }
+
+    @include tab-s {
+      width: 500px;
+    }
+
+    @include desk-s {
+      width: 500px;
+    }
+
+    @include desk-m {
+      width: 500px;
+    }
+  }
+
+  &::before {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      $stb-green-30 0%,
+      $stb-green-15 61.29%,
+      $stb-green-00 100%
+    );
+
+    @include tab-s {
+      width: 500px;
+      transform: translate(-50%, -40%);
+    }
+  }
+
+  &::after {
+    transform: translate(70%, -40%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      $stb-yellow-30 0%,
+      $stb-yellow-20 42%,
+      $stb-yellow-07 78.24%,
+      $stb-yellow-00 100%
+    );
+  }
 
   &__title {
+    margin: 0 auto;
     margin-bottom: 28px;
     text-transform: uppercase;
     color: $stb-text-primary;
@@ -174,18 +238,22 @@ body {
   &__plate {
     padding: 6px 16px;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-rows: 2.5fr 1fr;
     gap: 8px;
-    flex-direction: column;
     height: 100%;
   }
 
   &__plate-title {
     color: $stb-text-primary;
+
+    @include desk-l {
+      //   text-wrap: nowrap;
+    }
   }
 
   &__plate-link {
-    align-self: end;
+    justify-content: end;
 
     @include desk-l {
       font-size: $stb-text-14;
@@ -230,7 +298,6 @@ body {
 .link {
   display: inline-grid;
   grid-auto-flow: column;
-  align-items: stretch;
   grid-column-gap: 4px;
   color: $stb-link-accent;
   text-transform: uppercase;
@@ -240,6 +307,6 @@ body {
 
   .icon-arrow {
     display: block;
-    flex-shrink: 0;
+    align-self: center;
   }
 }
