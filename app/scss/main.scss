@@ -87,6 +87,10 @@ body {
     background: $stb-bg-secondary;
     border-radius: $border-r-xl;
     transition: background $transition;
+
+    @include desk-s {
+      padding: 6px;
+    }
   }
 
   &__label {
@@ -94,6 +98,13 @@ body {
     z-index: 1;
     top: 3px;
     right: 4px;
+
+    @include desk-s {
+      font-size: $stb-text-14;
+      line-height: $stb-line-110;
+      font-weight: 800;
+      letter-spacing: 0.14px;
+    }
 
     &::before {
       position: absolute;
@@ -144,7 +155,7 @@ body {
     overflow: hidden;
     position: relative;
 
-    &__background {
+    .promo-background {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -175,6 +186,11 @@ body {
 
   &__plate-link {
     align-self: end;
+
+    @include desk-l {
+      font-size: $stb-text-14;
+      line-height: $stb-line-140;
+    }
   }
 
   &:hover &__card {
@@ -195,14 +211,8 @@ body {
   text-transform: uppercase;
   font-size: $stb-text-12;
   line-height: $stb-line-130;
-  letter-spacing: 0.14px;
   border-radius: 0 10px 0 8px;
   background-color: inherit;
-
-  @include desk-s {
-    font-size: $stb-text-14;
-    line-height: $stb-line-110;
-  }
 
   &--casino {
     color: $stb-green-600;
@@ -227,11 +237,6 @@ body {
   font-style: italic;
   font-size: $stb-text-12;
   line-height: $stb-line-130;
-
-  @include desk-l {
-    font-size: $stb-text-14;
-    line-height: $stb-line-140;
-  }
 
   .icon-arrow {
     display: block;
