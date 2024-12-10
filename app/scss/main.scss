@@ -1,18 +1,152 @@
-@use 'sass:math';
+@use "sass:math";
 
 @import "vars";
 @import "fonts";
 @import "libs";
+@import "media";
 
-body {
-	font-size: 16px;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
-
-	overflow-x: hidden;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-// ALWAYS END
-@import "media";
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.container {
+  margin: 50px;
+  padding: 50px 20px 100px;
+  background-color: var(--stb-bg-primary);
+  text-align: center;
+  color: var(--stb-text-primary);
+  border-radius: 70px;
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.categories-menu {
+  margin: 0 auto;
+  max-width: 768px;
+  width: fit-content;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+
+  @include desk-s {
+    overflow: visible;
+  }
+}
+
+.category {
+  min-width: 110px;
+  height: 46px;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  padding: 12px;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  color: var(--stb-text-secondary);
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 12px;
+  border-image-slice: 28%;
+  border-image-width: 30px;
+  border-image-source: url("../img/border-base.svg");
+  background: var(--stb-gradient-800);
+  z-index: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    border-image: inherit;
+    border-radius: inherit;
+    background-image: var(--stb-gradient-850);
+    opacity: 0;
+  }
+
+  &:hover {
+    color: var(--stb-text-primary);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    border-image-source: url("../img/border-base-hover.svg");
+    border-image-slice: 24%;
+  }
+
+  @include desk-s {
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 8px;
+    text-transform: capitalize;
+    height: 96px;
+    padding-bottom: 8px;
+
+    &__image {
+      width: 48px;
+      height: 48px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 7px;
+      top: -2px;
+      inset-inline: 0;
+      z-index: 1;
+      margin: auto;
+      width: 93px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url("../img/border-ornament.svg");
+      opacity: 1;
+    }
+
+    &:active {
+      &::before {
+        background-image: url("../img/border-ornament-hover.svg");
+      }
+    }
+  }
+}

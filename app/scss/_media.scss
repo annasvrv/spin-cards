@@ -1,2 +1,53 @@
 @import "vars";
 
+$breakpoints: (
+  "mob-s": 360px,
+  "mob-m": 412px,
+  "tab-s": 768px,
+  "desk-s": 1280px,
+  "desk-m": 1536px,
+  "desk-l": 1920px,
+  "desk-xl": 2560px,
+);
+
+@mixin mob-s {
+  @media (min-width: map-get($breakpoints, "mob-s")) {
+    @content;
+  }
+}
+
+@mixin mob-m {
+  @media (min-width: map-get($breakpoints, "mob-m")) {
+    @content;
+  }
+}
+
+@mixin tab-s {
+  @media (min-width: map-get($breakpoints, "tab-s")) {
+    @content;
+  }
+}
+
+@mixin desk-s {
+  @media (min-width: map-get($breakpoints, "desk-s")) {
+    @content;
+  }
+}
+
+@mixin desk-m {
+  @media (min-width: map-get($breakpoints, "desk-m")) {
+    @content;
+  }
+}
+
+@mixin desk-l {
+  @media (min-width: map-get($breakpoints, "desk-l")) {
+    @content;
+  }
+}
+
+@mixin desk-xl {
+  @media (min-width: map-get($breakpoints, "desk-xl")) {
+    @content;
+  }
+}

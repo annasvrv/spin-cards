@@ -1,0 +1,107 @@
+:root {
+  // Color
+  --stb-real-black: 0 0 0;
+  --stb-black: 9 8 12;
+  --stb-white: 255 255 255;
+  --stb-neutral-50: 245 245 245;
+  --stb-neutral-100: 202 202 206;
+  --stb-neutral-150: 173 173 184;
+  --stb-neutral-200: 129 132 146;
+  --stb-neutral-300: 103 110 133;
+  --stb-neutral-400: 90 96 113;
+  --stb-neutral-500: 61 63 82;
+  --stb-neutral-600: 40 45 67;
+  --stb-neutral-700: 28 32 54;
+  --stb-neutral-800: 19 24 42;
+  --stb-neutral-900: 11 16 30;
+  --stb-neutral-950: 7 11 19;
+  --stb-brand-50: 212 224 247;
+  --stb-brand-100: 212 224 247;
+  --stb-brand-150: 190 209 244;
+  --stb-brand-160: 163 192 245;
+  --stb-brand-200: 134 175 249;
+  --stb-brand-300: 102 157 255;
+  --stb-brand-400: 66 132 255;
+  --stb-brand-500: 27 109 255;
+  --stb-brand-600: 16 39 91;
+  --stb-brand-700: 12 20 59;
+  --stb-brand-800: 17 17 59;
+  --stb-brand-900: 19 19 43;
+  --stb-brand-950: 15 13 28;
+  --stb-green-450: 134 186 66;
+  --stb-green-500: 112 176 31;
+  --stb-green-700: 100 143 43;
+  --stb-red-500: 251 95 81;
+  --stb-red-600: 249 26 6;
+  --stb-red-700: 174 18 4;
+  --stb-yellow-200: 247 232 186;
+  --stb-yellow-300: 250 219 158;
+  --stb-yellow-400: 255 207 110;
+  --stb-yellow-500: 255 184 0;
+  --stb-yellow-600: 137 85 41;
+  --stb-yellow-700: 91 44 21;
+  --stb-yellow-800: 62 32 14;
+  --stb-yellow-900: 38 32 39;
+
+  // Text
+  --stb-text-primary: rgb(var(--stb-neutral-50));
+  --stb-text-secondary: rgb(var(--stb-neutral-150));
+  --stb-text-contrast-primary: rgb(var(--stb-yellow-400));
+  --stb-text-contrast-secondary: rgb(var(--stb-neutral-50));
+  --stb-text-accent: rgb(var(--stb-brand-400));
+
+  // Links
+  --stb-link-primary: rgb(var(--stb-brand-500));
+  --stb-link-primary-hover: rgb(var(--stb-brand-400));
+  --stb-link-primary-active: rgb(var(--stb-brand-600));
+  --stb-link-secondary: rgb(var(--stb-neutral-150));
+  --stb-link-secondary-hover: rgb(var(--stb-neutral-100));
+  --stb-link-secondary-active: rgb(var(--stb-neutral-200));
+  --stb-link-tertiary: rgb(var(--stb-brand-300));
+  --stb-link-accent: rgb(var(--stb-yellow-400));
+  --stb-link-accent-hover: rgb(var(--stb-yellow-500));
+  --stb-link-accent-active: rgb(var(--stb-yellow-600));
+  --stb-link-alert: rgb(var(--stb-red-500));
+
+  // Background
+  --stb-bg-primary: rgb(var(--stb-neutral-900));
+  --stb-bg-secondary: rgb(var(--stb-neutral-800));
+  --stb-bg-tertiary: rgb(var(--stb-neutral-700));
+  --stb-bg-fourth: rgb(var(--stb-neutral-600));
+  --stb-bg-contrast-primary: rgb(var(--stb-neutral-800));
+  --stb-bg-contrast-secondary: rgb(var(--stb-neutral-900));
+  --stb-bg-contrast-tertiary: rgb(var(--stb-neutral-800));
+
+  //   Gradient
+
+  --stb-gradient-750: radial-gradient(
+    50.35% 50.35% at 50% 100%,
+    rgb(var(--stb-brand-600) / 0.6) 0%,
+    rgb(var(--stb-brand-600) / 0) 100%
+  );
+
+  --stb-gradient-800: var(--stb-gradient-750),
+    linear-gradient(rgb(var(--stb-neutral-800)), rgb(var(--stb-neutral-800)));
+
+  --stb-gradient-850: radial-gradient(
+      50.35% 50.35% at 50% 100%,
+      rgb(var(--stb-brand-500) / 0.6) 0%,
+      rgb(var(--stb-brand-600) / 0) 100%
+    ),
+    linear-gradient(rgb(var(--stb-brand-900)), rgb(var(--stb-brand-900)));
+  --stb-gradient-900: radial-gradient(
+    40% 40% at 50% 100%,
+    rgb(var(--stb-brand-400)) 0%,
+    rgb(20 14 32) 100%
+  );
+
+  //   media screens
+
+  --screen-desk-xl: 2560px;
+  --screen-desk-l: 1920px;
+  --screen-desk-m: 1536px;
+  --screen-desk-s: 1280px;
+  --screen-tab-s: 768px;
+  --screen-mob-m: 412px;
+  --screen-mob-s: 360px;
+}
