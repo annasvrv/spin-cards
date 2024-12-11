@@ -32,7 +32,73 @@
 
   <body>
     <div class="container">
-      <h1 class="title">Trainee Tasks</h1>
+      <h1 class="title">Masks</h1>
+      <div class="dialog">
+        <div class="dialog-inner">
+          <form action="submit" class="form-login">
+            <!-- header -->
+            <div class="dialog-header">
+              <p class="dialog-header__title">Log in</p>
+              <button type="button" class="button-unset dialog-header__btn">
+                <img
+                  src="./img/icons/close-icon.svg"
+                  alt=""
+                  class="close-icon"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+            <!-- body -->
+            <div class="dialog-body">
+              <p class="dialog-body__description">
+                Don't have an account?
+                <a href="#" class="link font-700"> Register Now </a>
+              </p>
+              <!-- email -->
+              <div class="form-control">
+                <label for="email" class="form-control__label">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  autocomplete="email"
+                  class="form-control__input"
+                  placeholder="Enter e-mail"
+                />
+              </div>
+              <!-- password -->
+              <div class="form-control">
+                <label for="password" class="form-control__label">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  autocomplete="email"
+                  class="form-control__input form-control__input--password"
+                  placeholder="Enter password"
+                />
+                <button type="button" class="form-control__toggle button-unset">
+                  <img
+                    src="./img/icons/close-eye-icon.svg"
+                    alt=""
+                    class="eye-icon"
+                    width="16"
+                    height="16"
+                  />
+                </button>
+                <!-- helper -->
+                <div class="form-control__helper">
+                  <button type="button" class="link button-unset">
+                    Forgot your password?
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="button">Log in</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="js/scripts.min.js"></script>

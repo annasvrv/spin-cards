@@ -5,10 +5,233 @@
 @import "libs";
 @import "media";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-size: 16px;
   min-width: 320px;
   line-height: 1.4;
+  color: rgb(var(--stb-white));
 }
 
-// ALWAYS END
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.dialog {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+  margin: 100px auto;
+  padding: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: 20px;
+    mask-image: url("../img/dialog/top-left.svg"),
+      url("../img/dialog/top-right.svg"), url("../img/dialog/center-left.svg"),
+      url("../img/dialog/center-right.svg"),
+      url("../img/dialog/bottom-left.svg"),
+      url("../img/dialog/bottom-right.svg"),
+      linear-gradient(rgb(var(--stb-black)), rgb(var(--stb-black))),
+      linear-gradient(rgb(var(--stb-black)), rgb(var(--stb-black))),
+      linear-gradient(rgb(var(--stb-black)), rgb(var(--stb-black)));
+    mask-size: 148px 150px, 148px 150px, 148px 80px, 148px 80px, 148px 150px,
+      148px 150px, calc(100% - 296px + 2px) calc(100% - 8px),
+      100% calc(50% - 148px - 40px), 100% calc(50% - 148px - 40px);
+    mask-position: top left, top right, center left, center right, bottom left,
+      bottom right, center, center 149px, center calc(100% - 149px);
+    mask-repeat: no-repeat;
+    inset: 0 -4px -4px 0;
+    background-color: rgb(var(--stb-black));
+  }
+}
+
+.dialog-inner {
+  position: relative;
+  mask-image: url("../img/dialog/top-left.svg"),
+    url("../img/dialog/top-right.svg"), url("../img/dialog/center-left.svg"),
+    url("../img/dialog/center-right.svg"), url("../img/dialog/bottom-left.svg"),
+    url("../img/dialog/bottom-right.svg"),
+    linear-gradient(rgb(var(--stb-black)), rgb(var(--stb-black))),
+    linear-gradient(rgb(var(--stb-black)), rgb(var(--stb-black))),
+    linear-gradient(rgb(var(--stb-black)), rgb(var(--stb-black)));
+  mask-size: 148px 150px, 148px 150px, 148px 80px, 148px 80px, 148px 150px,
+    148px 150px, calc(100% - 296px + 2px) calc(100% - 8px),
+    100% calc(50% - 148px - 40px), 100% calc(50% - 148px - 40px);
+  mask-position: top left, top right, center left, center right, bottom left,
+    bottom right, center, center 149px, center calc(100% - 149px);
+  mask-repeat: no-repeat;
+  background-color: rgb(var(--stb-bg-popup-primary));
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-image: image-set(
+      url("../img/dialog/background.webp"),
+      url("../img/dialog/background@2x.webp")
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.dialog-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px 28px 26px;
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.6;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--stb-text-primary);
+    text-shadow: var(--stb-shadow-200);
+  }
+
+  &__btn {
+    position: absolute;
+    right: 28px;
+    margin-left: auto;
+  }
+}
+
+.close-icon {
+  filter: drop-shadow(var(--stb-shadow-50));
+}
+
+.dialog-body {
+  display: grid;
+  gap: 20px;
+  padding: 0 28px 36px;
+
+  &__description {
+    font-size: 14px;
+    line-height: 1;
+    font-style: normal;
+    color: var(--stb-text-secondary);
+  }
+}
+
+.link {
+  color: var(--stb-link-primary);
+  text-decoration: underline;
+  // text-underline-offset: 3px;
+}
+
+.form-control {
+  display: grid;
+  gap: 8px;
+  position: relative;
+
+  &__label {
+    font-size: 12px;
+    line-height: 1;
+    color: var(--stb-text-primary);
+  }
+
+  &__input {
+    padding: 14px 16px;
+    border-radius: 1px;
+    border: 2px solid var(--stb-input-stroke);
+    background: var(--stb-input-fill);
+    box-shadow: var(--stb-shadow-100);
+  }
+
+  &__helper {
+    padding-block: 8px;
+    text-align: center;
+
+    .link {
+      text-shadow: var(--stb-shadow-25);
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    inset-inline-end: 16px;
+    top: 39%;
+    transform: translateY(-50%);
+  }
+}
+
+.button {
+  padding: 10px 24px;
+  border-radius: 12px;
+  border: 3px solid rgb(var(--stb-black));
+  background: rgb(var(--stb-black));
+  box-shadow: var(--stb-shadow-50);
+  background-image: var(--stb-gradient-100);
+  color: var(--stb-button-text-dark);
+  text-align: center;
+  text-shadow: 2px 2px 0px #fff;
+  font-size: 24px;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    margin: 6px;
+    border-radius: 5px;
+    z-index: -1;
+    background-image: var(--stb-button-primary);
+  }
+
+  &::after {
+    background-image: url("../img/button/shape-left.svg"),
+      url("../img/button/shape-right.svg"),
+      url("../img/button/shape-center-1.svg"),
+      url("../img/button/shape-center-2.svg");
+    background-size: 32px calc(100% - 5px * 2), 32px calc(100% - 5px * 2),
+      calc(50% - 32px - 5px) calc(100% - 5px * 2),
+      calc(50% - 32px - 5px) calc(100% - 5px * 2);
+    background-position: 5px 5px, calc(100% - 5px) 5px, calc(32px + 5px) 5px,
+      calc(100% - 32px - 5px) 5px;
+    filter: none;
+    opacity: 1;
+  }
+}

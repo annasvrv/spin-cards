@@ -1,1 +1,24 @@
+.font-700 {
+  font-weight: 700;
+}
 
+.button-unset {
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.button--m {
+  --stb-button-border-radius: 12px;
+  --stb-button-border-width: 3px;
+  --stb-button-box-shadow-size: 2px;
+  --stb-button-inner-shape-width: 32px;
+  --stb-button-inner-shape-horizontal-offset: 5px;
+  --stb-button-inner-shape-vertical-offset: 5px;
+  --stb-button-inner-field-inset: 6px;
+  --stb-button-inner-border-radius: 6px;
+  --stb-button-min-height: 64px;
+  --stb-button-padding: 5px 20px;
+  --stb-button-font-size: 24px;
+}
