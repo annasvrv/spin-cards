@@ -1,3 +1,8 @@
+.decorative-line {
+  border: 2px solid #aaa7a7;
+  border-radius: 50%;
+}
+
 .font-700 {
   font-weight: 700;
 }
@@ -21,4 +26,27 @@
   --stb-button-min-height: 64px;
   --stb-button-padding: 5px 20px;
   --stb-button-font-size: 24px;
+}
+
+$icon-mask: (
+  "promotions": "../img/sidebar/bonus.svg",
+  "home": "../img/sidebar/home.svg",
+  "casino": "../img/sidebar/games-casino.svg",
+  "live-casino": "../img/sidebar/games-live-casino.svg",
+  "jackpots": "../img/sidebar/jackpots.svg",
+  "sports": "../img/sidebar/sports-football.svg",
+  "live-betting": "../img/sidebar/sports-live-sports.svg",
+  "challenges": "../img/sidebar/challenges.svg",
+  "tournaments": "../img/sidebar/tournament.svg",
+  "bonus-crab": "../img/sidebar/cashcrab.svg",
+  "shop": "../img/sidebar/shop.svg",
+  "vip": "../img/sidebar/vip.svg",
+);
+
+@mixin icon-mask($icon-name) {
+  $mask-url: map-get($icon-mask, $icon-name);
+
+  @if $mask-url {
+    mask-image: url(#{$mask-url});
+  }
 }

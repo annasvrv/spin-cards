@@ -1,0 +1,121 @@
+.sidebar {
+  display: grid;
+  gap: 4px;
+  margin: 50px 100px;
+  padding: 12px;
+  max-width: 232px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--stb-bg-fourth);
+
+  &__list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &:not(:last-child):after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-top: 4px;
+      background: linear-gradient(
+        90deg,
+        rgb(var(--stb-neutral-700) / 0) 0%,
+        rgb(var(--stb-neutral-50)) 50%,
+        rgb(var(--stb-neutral-700) / 0) 100%
+      );
+    }
+  }
+
+  &__item {
+    --stb-bg-icon: var(--stb-button-secondary);
+    --stb-text-color: var(--stb-button-secondary);
+    --stb-element-shadow: var(--stb-shadow-25);
+
+    padding: 10px 20px;
+    border-radius: 6px;
+
+    &:hover {
+      --stb-bg-icon: var(--stb-button-secondary-hover);
+      --stb-text-color: var(--stb-text-primary);
+
+      background: rgb(var(--stb-neutral-800));
+    }
+
+    &:active {
+      --stb-bg-icon: var(--stb-button-primary);
+      --stb-text-color: var(--stb-text-primary);
+
+      background: var(--stb-bg-secondary);
+    }
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+
+  &__image {
+    width: 20px;
+    height: 20px;
+    background: var(--stb-bg-icon);
+    mask-repeat: no-repeat;
+    filter: drop-shadow(var(--stb-shadow-200));
+
+    &--promotions {
+      @include icon-mask("promotions");
+    }
+    &--home {
+      @include icon-mask("home");
+    }
+    &--casino {
+      @include icon-mask("casino");
+    }
+    &--live-casino {
+      @include icon-mask("live-casino");
+    }
+    &--jackpots {
+      @include icon-mask("jackpots");
+    }
+    &--sports {
+      @include icon-mask("sports");
+    }
+    &--live-betting {
+      @include icon-mask("live-betting");
+    }
+    &--challenges {
+      @include icon-mask("challenges");
+    }
+    &--tournaments {
+      @include icon-mask("tournaments");
+    }
+    &--bonus-crab {
+      @include icon-mask("bonus-crab");
+    }
+    &--shop {
+      @include icon-mask("shop");
+    }
+    &--vip {
+      @include icon-mask("vip");
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    // text-shadow: var(--stb-shadow, var(--stb-shadow-25));
+    // color: var(--stb-text-primary);
+    background: var(--stb-text-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
