@@ -39,7 +39,11 @@
           <form action="submit" class="form-login">
             <!-- header -->
             <div class="dialog-header">
-              <p class="dialog-header__title">Log in</p>
+              <p
+                class="dialog-header__title font-700 title-basic title-basic--l leading-160"
+              >
+                Log in
+              </p>
               <button type="button" class="button-unset dialog-header__btn">
                 <img
                   src="./img/icons/close-icon.svg"
@@ -103,117 +107,905 @@
 
       <hr class="decorative-line" />
 
-      <!-- sidebar -->
-      <aside class="sidebar">
-        <!-- list -->
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--promotions"></div>
+      <!-- sidebar + shop -->
+      <div class="page">
+        <!-- sidebar -->
+        <aside class="sidebar-wrapper">
+          <div class="sidebar">
+            <!-- list -->
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div
+                    class="nav-link__image nav-link__image--promotions"
+                  ></div>
+                  <span class="nav-link__title">Promotions</span>
+                </a>
+              </li>
+            </ul>
+            <!-- list -->
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div class="nav-link__image nav-link__image--home"></div>
+                  <span class="nav-link__title">Home</span>
+                </a>
+              </li>
+            </ul>
+            <!-- list -->
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div class="nav-link__image nav-link__image--casino"></div>
+                  <span class="nav-link__title">Casino</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div
+                    class="nav-link__image nav-link__image--live-casino"
+                  ></div>
+                  <span class="nav-link__title">Live Casino</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div class="nav-link__image nav-link__image--jackpots"></div>
+                  <span class="nav-link__title">Jackpots</span>
+                </a>
+              </li>
+            </ul>
+            <!-- list -->
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div class="nav-link__image nav-link__image--sports"></div>
+                  <span class="nav-link__title">Sports</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div
+                    class="nav-link__image nav-link__image--live-betting"
+                  ></div>
+                  <span class="nav-link__title">Live Betting</span>
+                </a>
+              </li>
+            </ul>
+            <!-- list -->
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div
+                    class="nav-link__image nav-link__image--challenges"
+                  ></div>
+                  <span class="nav-link__title">Challenges</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div
+                    class="nav-link__image nav-link__image--tournaments"
+                  ></div>
+                  <span class="nav-link__title">Tournaments</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div
+                    class="nav-link__image nav-link__image--bonus-crab"
+                  ></div>
+                  <span class="nav-link__title">Bonus Crab</span>
+                </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div class="nav-link__image nav-link__image--shop"></div>
+                  <span class="nav-link__title">Shop</span>
+                </a>
+              </li>
+            </ul>
+            <!-- list -->
+            <ul class="sidebar__list">
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link nav-link">
+                  <div class="nav-link__image nav-link__image--vip"></div>
+                  <span class="nav-link__title">VIP Levels</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
 
-              <span class="nav-link__title">Promotions</span>
-            </a>
-          </li>
-        </ul>
+        <!-- shop page -->
+        <div class="container shop">
+          <h2
+            class="shop__title font-700 title-basic title-basic--l leading-120"
+          >
+            Shop
+          </h2>
+          <ul class="shop__nav-list">
+            <li class="shop__nav-item">
+              <a href="#" class="shop__nav-link">
+                <img
+                  src="./img/shop/shop-icons.webp"
+                  srcset="./img/shop/shop-icons@2x.webp"
+                  alt=""
+                  width="24"
+                  height="24"
+                  class="shop__nav-image"
+                />
+                <h3
+                  class="shop__nav-title title-basic title-basic--s leading-120"
+                >
+                  All
+                </h3>
+              </a>
+            </li>
+            <li class="shop__nav-item">
+              <a href="#" class="shop__nav-link">
+                <img
+                  src="./img/shop/shop-icons.webp"
+                  srcset="./img/shop/shop-icons@2x.webp"
+                  alt=""
+                  width="24"
+                  height="24"
+                  class="shop__nav-image"
+                />
+                <h3
+                  class="shop__nav-title title-basic title-basic--s leading-120"
+                >
+                  Best sellers
+                </h3>
+              </a>
+            </li>
+            <li class="shop__nav-item">
+              <a href="#" class="shop__nav-link">
+                <img
+                  src="./img/shop/shop-icons.webp"
+                  srcset="./img/shop/shop-icons@2x.webp"
+                  alt=""
+                  width="24"
+                  height="24"
+                  class="shop__nav-image"
+                />
+                <h3
+                  class="shop__nav-title title-basic title-basic--s leading-120"
+                >
+                  Bonus money
+                </h3>
+              </a>
+            </li>
+            <li class="shop__nav-item">
+              <a href="#" class="shop__nav-link">
+                <img
+                  src="./img/shop/shop-icons.webp"
+                  srcset="./img/shop/shop-icons@2x.webp"
+                  alt=""
+                  width="24"
+                  height="24"
+                  class="shop__nav-image"
+                />
+                <h3
+                  class="shop__nav-title title-basic title-basic--s leading-120"
+                >
+                  Free spins
+                </h3>
+              </a>
+            </li>
+            <li class="shop__nav-item">
+              <a href="#" class="shop__nav-link">
+                <img
+                  src="./img/shop/shop-icons.webp"
+                  srcset="./img/shop/shop-icons@2x.webp"
+                  alt=""
+                  width="24"
+                  height="24"
+                  class="shop__nav-image"
+                />
+                <h3
+                  class="shop__nav-title title-basic title-basic--s leading-120"
+                >
+                  Free bets
+                </h3>
+              </a>
+            </li>
+            <li class="shop__nav-item">
+              <a href="#" class="shop__nav-link">
+                <img
+                  src="./img/shop/shop-icons.webp"
+                  srcset="./img/shop/shop-icons@2x.webp"
+                  alt=""
+                  width="24"
+                  height="24"
+                  class="shop__nav-image"
+                />
+                <h3
+                  class="shop__nav-title title-basic title-basic--s leading-120"
+                >
+                  Bonus crab
+                </h3>
+              </a>
+            </li>
+          </ul>
+          <p class="shop__description text-16 leading-140">
+            Spend your coins to unlock Best Sellers
+          </p>
+          <div class="shop__categories">
+            <h3
+              class="shop__title title-basic title-basic--m leading-120 font-700"
+            >
+              Best sellers
+            </h3>
+            <div class="slider-wrapper">
+              <div class="shop__slider">
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ------------- -->
+          <div class="shop__categories">
+            <h3
+              class="shop__title title-basic title-basic--m leading-120 font-700"
+            >
+              Bonus money
+            </h3>
+            <div class="slider-wrapper">
+              <div class="shop__slider">
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ------------- -->
+          <div class="shop__categories">
+            <h3
+              class="shop__title title-basic title-basic--m leading-120 font-700"
+            >
+              Free spins
+            </h3>
+            <div class="slider-wrapper">
+              <div class="shop__slider">
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ------------- -->
+          <div class="shop__categories">
+            <h3
+              class="shop__title title-basic title-basic--m leading-120 font-700"
+            >
+              Free bets
+            </h3>
+            <div class="slider-wrapper">
+              <div class="shop__slider">
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <div class="card-inner">
+                    <img
+                      src="./img/shop/bonus-crab.webp"
+                      srcset="./img/shop/bonus-crab@2x.webp 2x"
+                      alt=""
+                      class="card__image"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title font-700 text-12 leading-130">
+                        Amazing Link Zeus
+                      </h4>
+                      <p class="card__price font-700 text-12 leading-130">€5</p>
+                      <button type="button" class="button">
+                        <span class="text-16">25</span>
+                        <img
+                          src="./img/shop/shop-btn-icon.svg"
+                          alt=""
+                          width="16"
+                          height="16"
+                          class="button__icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- list -->
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--home"></div>
-
-              <span class="nav-link__title">Home</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- list -->
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--casino"></div>
-
-              <span class="nav-link__title">Casino</span>
-            </a>
-          </li>
-
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--live-casino"></div>
-
-              <span class="nav-link__title">Live Casino</span>
-            </a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--jackpots"></div>
-
-              <span class="nav-link__title">Jackpots</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- list -->
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--sports"></div>
-
-              <span class="nav-link__title">Sports</span>
-            </a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--live-betting"></div>
-
-              <span class="nav-link__title">Live Betting</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- list -->
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--challenges"></div>
-
-              <span class="nav-link__title">Challenges</span>
-            </a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--tournaments"></div>
-
-              <span class="nav-link__title">Tournaments</span>
-            </a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--bonus-crab"></div>
-
-              <span class="nav-link__title">Bonus Crab</span>
-            </a>
-          </li>
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--shop"></div>
-
-              <span class="nav-link__title">Shop</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- list -->
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="#" class="sidebar__link nav-link">
-              <div class="nav-link__image nav-link__image--vip"></div>
-
-              <span class="nav-link__title">VIP Levels</span>
-            </a>
-          </li>
-        </ul>
-      </aside>
+      <hr class="decorative-line" />
     </div>
 
     <script src="js/scripts.min.js"></script>

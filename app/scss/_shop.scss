@@ -1,0 +1,129 @@
+.shop {
+  display: grid;
+  gap: 24px;
+  overflow-y: auto;
+  padding-block: 40px;
+  background: var(--stb-gradient-200);
+  max-width: 1000px;
+  width: 100%;
+
+  &__nav-list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+
+  &__nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px 10px 8px;
+    background: var(--stb-bg-secondary);
+    border: 1px solid rgb(var(--stb-black));
+    border-radius: 1px;
+    box-shadow: var(--stb-shadow-50);
+    text-decoration: none;
+
+    &:active {
+      background: var(--stb-bg-contrast-fourth);
+
+      .title-basic {
+        color: rgb(var(--stb-black));
+
+        &--s {
+          text-shadow: none;
+        }
+      }
+    }
+
+    &:hover {
+      background: var(--stb-bg-primary);
+    }
+  }
+
+  &__description {
+    color: var(--stb-text-secondary);
+  }
+
+  &__categories {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__slider {
+    display: flex;
+    gap: 12px;
+    padding-inline: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
+
+.slider-wrapper {
+  margin-inline: -20px;
+  mask-image: linear-gradient(
+    90deg,
+    rgb(var(--stb-white) / 0) 0%,
+    rgb(var(--stb-white) / 0) calc(20px * 0.4),
+    rgb(var(--stb-white)) 20px,
+    rgb(var(--stb-white)) calc(100% - 20px),
+    rgb(var(--stb-white) / 0) calc(100% - 20px * 0.4),
+    rgb(var(--stb-white) / 0) 100%
+  );
+}
+
+.card {
+  display: block;
+  flex-shrink: 0;
+  max-width: 195px;
+  width: 100%;
+  padding: 6px;
+  border-radius: 1px;
+  box-shadow: var(--stb-shadow-50);
+  background: rgb(var(--stb-white));
+  color: var(--stb-text-primary);
+  text-decoration: none;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__content {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+  }
+
+  &__title {
+    padding-block: 2px 6px;
+  }
+
+  &__price {
+    color: rgb(var(--stb-yellow-500));
+    -webkit-text-stroke: 3px rgb(var(--stb-black));
+    paint-order: stroke fill;
+    filter: drop-shadow(var(--stb-shadow-25));
+    margin-bottom: 8px;
+  }
+
+  .button {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-shadow: 1px 1px 0px rgb(var(--stb-white));
+
+    &__icon {
+      filter: drop-shadow(1px 1px 0 rgb(var(--stb-white)));
+    }
+  }
+}
+
+.card-inner {
+  display: grid;
+  justify-items: center;
+  border-radius: 2px;
+  border: 2px solid rgb(var(--stb-black));
+  background: var(--stb-gradient-250);
+}

@@ -1,12 +1,21 @@
+.sidebar-wrapper {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: inherit;
+  background-color: var(--stb-bg-fourth);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 232px;
+  padding: 12px;
+  width: 100%;
+  z-index: 2;
+}
+
 .sidebar {
   display: grid;
   gap: 4px;
-  margin: 50px 100px;
-  padding: 12px;
-  max-width: 232px;
-  width: 100%;
-  border-radius: 4px;
-  background-color: var(--stb-bg-fourth);
 
   &__list {
     width: 100%;
@@ -113,8 +122,6 @@
     font-style: italic;
     font-weight: 700;
     text-transform: uppercase;
-    // text-shadow: var(--stb-shadow, var(--stb-shadow-25));
-    // color: var(--stb-text-primary);
     background: var(--stb-text-color);
     background-clip: text;
     -webkit-background-clip: text;

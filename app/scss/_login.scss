@@ -68,16 +68,6 @@
   gap: 14px;
   padding: 20px 28px 26px;
 
-  &__title {
-    font-size: 20px;
-    line-height: 1.6;
-    font-style: italic;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--stb-text-primary);
-    text-shadow: var(--stb-shadow-200);
-  }
-
   &__btn {
     position: absolute;
     right: 28px;
