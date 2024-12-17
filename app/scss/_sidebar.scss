@@ -38,7 +38,7 @@
     }
   }
 
-  &__item {
+  &__link {
     --stb-bg-icon: var(--stb-button-secondary);
     --stb-text-color: var(--stb-button-secondary);
     --stb-element-shadow: var(--stb-shadow-25);
@@ -55,6 +55,14 @@
     }
 
     &:active {
+      --stb-bg-icon: var(--stb-button-primary);
+      --stb-text-color: var(--stb-text-primary);
+
+      background: var(--stb-bg-secondary);
+      border: 2px solid rgb(var(--stb-black));
+    }
+
+    &.active {
       --stb-bg-icon: var(--stb-button-primary);
       --stb-text-color: var(--stb-text-primary);
 
