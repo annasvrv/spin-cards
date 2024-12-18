@@ -90,27 +90,73 @@
     margin-inline: 4px;
     border-radius: 12px;
     background-color: #0b101e;
+    list-style: none;
   }
 
   &__item {
-    border: 1px solid #939090;
+    border: 1px solid #676e85;
     background-color: #0b101e;
+    border-radius: 8px;
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
+.carte {
   width: 182px;
   height: 320px;
+  position: relative;
+  background-image: url("../img/collections/top-left-deco.svg"),
+    url("../img/collections/top-right-deco.svg"),
+    url("../img/collections/dark-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 38px 34px, 38px 34px, cover;
+  background-position: top -1.5px left -1px, top -1.5px right -1px, center;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 36px;
+    height: 32px;
+    mask-size: 36px 32px;
+    mask-repeat: no-repeat;
+    background-color: #0b101e;
+  }
+
+  &::before {
+    top: -5px;
+    left: -2px;
+    mask-image: url("../img/collections/top-left-corner.svg");
+    mask-position: top left;
+  }
+
+  &::after {
+    top: -5px;
+    right: -2px;
+    mask-image: url("../img/collections/top-right-corner.svg");
+    mask-position: top right;
+  }
+
+  &__back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &__reward {
     display: flex;
     gap: 2px;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
-    border: 1px solid #1ec352;
+    // border: 1px solid #1ec352;
+    background-color: #0b101e;
+    border-radius: 12px;
+    width: calc(100% - 60px);
     padding-inline: 4px;
+    padding-block: 1px;
+    border-bottom: 2px solid #676e85;
   }
 
   &__reward-number {
