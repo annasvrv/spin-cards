@@ -46,6 +46,7 @@
   --stb-yellow-50: 243 233 145; // #F3E991
   --stb-yellow-100: 246 234 121; // #F6EA79
   --stb-yellow-200: 252 236 95; // #FCEC5F
+  --stb-yellow-250: 255 207 110; // #FFCF6E
   --stb-yellow-300: 255 237 71; // #FFED47
   --stb-yellow-400: 255 235 51; // #FFEB33
   --stb-yellow-500: 255 229 0; // #FFE500
@@ -277,39 +278,41 @@
   --stb-functional-info: rgb(var(--stb-violet-900));
 
   // new filters
-  --stb-button-text-bright-filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(126deg)
-    brightness(108%) contrast(105%);
-  --stb-button-text-middle-filter: invert(59%) sepia(22%) saturate(499%) hue-rotate(207deg)
-    brightness(89%) contrast(87%);
-  --stb-text-secondary-filter: invert(64%) sepia(11%) saturate(970%) hue-rotate(207deg)
-    brightness(85%) contrast(83%);
-  --stb-text-contrast-secondary-filter: invert(17%) sepia(14%) saturate(3500%) hue-rotate(184deg)
-    brightness(90%) contrast(85%);
-  --stb-text-primary-filter: invert(30%) sepia(9%) saturate(1781%) hue-rotate(207deg)
-    brightness(97%) contrast(89%);
-  --stb-white-filter: invert(99%) sepia(3%) saturate(371%) hue-rotate(87deg) brightness(115%)
-    contrast(100%);
-  --stb-brand-500-filter: invert(58%) sepia(23%) saturate(7495%) hue-rotate(217deg) brightness(103%)
-    contrast(98%);
-  --stb-icon-100-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1216%)
-    hue-rotate(255deg) brightness(92%) contrast(71%);
-  --stb-icon-400-filter: invert(58%) sepia(23%) saturate(462%) hue-rotate(207deg) brightness(91%)
-    contrast(88%);
-  --stb-icon-800-filter: brightness(0) saturate(100%) invert(80%) sepia(7%) saturate(202%)
-    hue-rotate(165deg) brightness(91%) contrast(89%);
+  --stb-button-text-bright-filter: invert(100%) sepia(0%) saturate(7487%)
+    hue-rotate(126deg) brightness(108%) contrast(105%);
+  --stb-button-text-middle-filter: invert(59%) sepia(22%) saturate(499%)
+    hue-rotate(207deg) brightness(89%) contrast(87%);
+  --stb-text-secondary-filter: invert(64%) sepia(11%) saturate(970%)
+    hue-rotate(207deg) brightness(85%) contrast(83%);
+  --stb-text-contrast-secondary-filter: invert(17%) sepia(14%) saturate(3500%)
+    hue-rotate(184deg) brightness(90%) contrast(85%);
+  --stb-text-primary-filter: invert(30%) sepia(9%) saturate(1781%)
+    hue-rotate(207deg) brightness(97%) contrast(89%);
+  --stb-white-filter: invert(99%) sepia(3%) saturate(371%) hue-rotate(87deg)
+    brightness(115%) contrast(100%);
+  --stb-brand-500-filter: invert(58%) sepia(23%) saturate(7495%)
+    hue-rotate(217deg) brightness(103%) contrast(98%);
+  --stb-icon-100-filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+    saturate(1216%) hue-rotate(255deg) brightness(92%) contrast(71%);
+  --stb-icon-400-filter: invert(58%) sepia(23%) saturate(462%)
+    hue-rotate(207deg) brightness(91%) contrast(88%);
+  --stb-icon-800-filter: brightness(0) saturate(100%) invert(80%) sepia(7%)
+    saturate(202%) hue-rotate(165deg) brightness(91%) contrast(89%);
 
   // shadows
   --stb-shadow-25: 1px 1px 0 rgb(var(--stb-black));
   --stb-shadow-50: 2px 2px 0 rgb(var(--stb-black));
   --stb-shadow-100: 4px 4px 0 rgb(var(--stb-black));
-  --stb-shadow-200: 2px 2px 0 rgb(var(--stb-black)), 1px 1px 0 rgb(var(--stb-black));
+  --stb-shadow-200: 2px 2px 0 rgb(var(--stb-black)),
+    1px 1px 0 rgb(var(--stb-black));
   --stb-input-shadow-1: var(--stb-shadow-25);
   --stb-input-shadow-2: var(--stb-shadow-50);
   --stb-input-shadow-4: var(--stb-shadow-100);
   --stb-shadow-primary: 0 6px 16px rgb(37 14 61 / 0.1);
-  --stb-filter-drop-shadow-accent: drop-shadow(1px 1px 0px rgb(var(--stb-black)))
+  --stb-filter-drop-shadow-accent: drop-shadow(
+      1px 1px 0px rgb(var(--stb-black))
+    )
     drop-shadow(1px 1px 0px rgb(var(--stb-black)));
   --stb-filter-drop-shadow: drop-shadow(1px 1px 0px rgb(var(--stb-black)));
   --stb-category-menu-bottom-shadow-stroke: inset 0 -2px 0 rgb(var(--stb-black));
 }
-
