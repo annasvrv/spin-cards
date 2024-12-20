@@ -86,6 +86,10 @@
   }
 
   &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px 12px;
+    justify-items: center;
     padding: 16px 20px 20px;
     margin-inline: 4px;
     border-radius: 12px;
@@ -94,54 +98,98 @@
   }
 
   &__item {
-    border: 1px solid #676e85;
-    background-color: #0b101e;
-    border-radius: 8px;
+    position: relative;
+    width: 182px;
+    height: 320px;
+    border-radius: 12px;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+
+      width: 36px;
+      height: 32px;
+      mask-size: 36px 32px;
+      mask-repeat: no-repeat;
+      background-color: #0b101e;
+    }
+
+    &::before {
+      top: -5px;
+      left: -2px;
+      mask-image: url("../img/collections/top-left-corner.svg");
+      mask-position: top left;
+    }
+
+    &::after {
+      top: -5px;
+      right: -2px;
+      mask-image: url("../img/collections/top-right-corner.svg");
+      mask-position: top right;
+    }
   }
 }
 
 .carte {
-  width: 182px;
-  height: 320px;
-  position: relative;
+  width: 100%;
+  height: 100%;
+
   background-image: url("../img/collections/top-left-deco.svg"),
     url("../img/collections/top-right-deco.svg"),
-    url("../img/collections/dark-bg.jpg");
+    url("../img/collections/down-right-deco.svg"),
+    url("../img/collections/down-center-deco.svg"),
+    url("../img/collections/down-left-deco.svg"),
+    linear-gradient(
+      0deg,
+      rgb(var(--stb-neutral-300)),
+      rgb(var(--stb-neutral-300))
+    ),
+    linear-gradient(
+      0deg,
+      rgb(var(--stb-neutral-300)),
+      rgb(var(--stb-neutral-300))
+    ),
+    linear-gradient(
+      0deg,
+      rgb(var(--stb-neutral-300)),
+      rgb(var(--stb-neutral-300))
+    ),
+    linear-gradient(
+      0deg,
+      rgb(var(--stb-neutral-300)) 1px,
+      rgb(18, 33, 69) 1px,
+      rgb(39, 38, 41) 22px,
+      rgb(var(--stb-neutral-300)) 20px
+    );
+
   background-repeat: no-repeat;
-  background-size: 38px 34px, 38px 34px, cover;
-  background-position: top -1.5px left -1px, top -1.5px right -1px, center;
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 36px;
-    height: 32px;
-    mask-size: 36px 32px;
-    mask-repeat: no-repeat;
-    background-color: #0b101e;
-  }
-
-  &::before {
-    top: -5px;
-    left: -2px;
-    mask-image: url("../img/collections/top-left-corner.svg");
-    mask-position: top left;
-  }
-
-  &::after {
-    top: -5px;
-    right: -2px;
-    mask-image: url("../img/collections/top-right-corner.svg");
-    mask-position: top right;
-  }
+  background-size: 38px 34px, 38px 34px, 41px 35px, 52px 8px, 41px 35px,
+    calc(100% - 80px) 2px, 1px calc(100% - 70px), 1px calc(100% - 70px),
+    calc(100% - 62px) 23px;
+  background-position: top -1px left, top -1px right, bottom 6px right,
+    bottom center, bottom 6px left, center bottom 6px, bottom 38px right 1px,
+    top 31px left 1px, top center;
 
   &__back {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    width: 100%;
+    height: calc(100% - 8px);
+    // background-color: #cea4a41d;
+    // background: url(../img/collections/demeter.jpg);
+    // background-size: cover;
+    border-radius: 25px;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    height: calc(100% - 6px);
+    border-radius: 25px;
+    overflow: hidden;
   }
 
   &__reward {
@@ -150,13 +198,9 @@
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    // border: 1px solid #1ec352;
-    background-color: #0b101e;
-    border-radius: 12px;
-    width: calc(100% - 60px);
+    width: calc(100% - 64px);
     padding-inline: 4px;
     padding-block: 1px;
-    border-bottom: 2px solid #676e85;
   }
 
   &__reward-number {
@@ -170,26 +214,53 @@
   }
 
   &__button {
+    position: relative;
     all: unset;
     box-sizing: border-box;
     display: flex;
     gap: 8px;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin: auto auto 8px;
-    padding: 0 24px;
-    border: 1px solid #e08686;
-    border-radius: 4px;
-    background: radial-gradient(
-      100% 100% at 50% 0,
-      rgb(11, 16, 30) 0%,
-      rgb(7, 11, 19) 100%
+    padding: 7px 12px;
+    background-image: radial-gradient(
+      100% 100% at 50% 0%,
+      rgb(var(--stb-neutral-700)) 0%,
+      rgb(var(--stb-neutral-950)) 100%
     );
-    background-size: cover;
+    box-shadow: (
+      0 -3px 6px 0 rgb(67 72 86 / 0.8) inset,
+      0 4px 4px 0 rgb(126 132 155 / 0.4) inset
+    );
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    border-radius: 25px;
     cursor: pointer;
+
+    &::after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      inset: calc(-1 * width);
+      pointer-events: none;
+      border-radius: inherit;
+      background-image: url("../img/collections/carte-btn-left.svg"),
+        linear-gradient(
+          0deg,
+          rgb(212, 224, 247) 1px 0%,
+          rgb(212, 224, 247) 1px 0%
+        ),
+        url("../img/collections/carte-btn-right.svg"),
+        linear-gradient(0deg, rgb(28 32 54) 1px 0%, rgb(28 32 54) 1px 0%);
+      background-size: auto 40px, calc(100% - 44px) 1px, auto 40px,
+        calc(100% - 44px) 1px;
+      background-repeat: no-repeat;
+      background-position: left, top center, right, bottom center;
+    }
   }
 
   &__button-title {
