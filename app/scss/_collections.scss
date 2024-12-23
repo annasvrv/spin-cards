@@ -102,35 +102,11 @@
     width: 182px;
     height: 320px;
     border-radius: 25px;
-    background: url("../img/collections/demeter.jpg");
-    background-size: calc(100% - 4px) calc(100% - 15px);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #0b101e;
+    perspective: 1000px;
 
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 36px;
-      height: 32px;
-      mask-size: 36px 32px;
-      mask-repeat: no-repeat;
-      background-color: #0b101e;
-    }
-
-    &::before {
-      top: -5px;
-      left: -2px;
-      mask-image: url("../img/collections/top-left-corner.svg");
-      mask-position: top left;
-    }
-
-    &::after {
-      top: -5px;
-      right: -2px;
-      mask-image: url("../img/collections/top-right-corner.svg");
-      mask-position: top right;
+    &:hover .carte {
+      transform: rotateY(180deg);
     }
   }
 }
@@ -138,52 +114,127 @@
 .carte {
   width: 100%;
   height: 100%;
-  background-image: url("../img/collections/top-left-deco.svg"),
-    url("../img/collections/top-right-deco.svg"),
-    url("../img/collections/down-right-deco.svg"),
-    url("../img/collections/down-center-deco.svg"),
-    url("../img/collections/down-left-deco.svg"),
-    linear-gradient(
-      0deg,
-      rgb(var(--stb-neutral-300)),
-      rgb(var(--stb-neutral-300))
-    ),
-    linear-gradient(
-      0deg,
-      rgb(var(--stb-neutral-300)),
-      rgb(var(--stb-neutral-300))
-    ),
-    linear-gradient(
-      0deg,
-      rgb(var(--stb-neutral-300)),
-      rgb(var(--stb-neutral-300))
-    ),
-    linear-gradient(
-      0deg,
-      rgb(var(--stb-neutral-300)) 1px,
-      rgb(18, 33, 69) 1px,
-      rgb(39, 38, 41) 22px,
-      rgb(var(--stb-neutral-300)) 20px
-    );
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 
-  background-repeat: no-repeat;
-  background-size: 38px 34px, 38px 34px, 41px 35px, 52px 8px, 41px 35px,
-    calc(100% - 80px) 2px, 1px calc(100% - 70px), 1px calc(100% - 70px),
-    calc(100% - 62px) 23px;
-  background-position: top -1px left, top -1px right, bottom 6px right,
-    bottom center, bottom 6px left, center bottom 6px, bottom 38px right 1px,
-    top 31px left 1px, top center;
-
-  &__back {
+  &__back,
+  &__front {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: calc(100% - 8px);
-    // background-color: #cea4a41d;
-    // background: url(../img/collections/demeter.jpg);
-    // background-size: cover;
+    height: 100%;
     border-radius: 25px;
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  &__back {
+    background-image: url("../img/collections/top-left-deco.svg"),
+      url("../img/collections/top-right-deco.svg"),
+      url("../img/collections/down-right-deco.svg"),
+      url("../img/collections/down-center-deco.svg"),
+      url("../img/collections/down-left-deco.svg"),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)),
+        rgb(var(--stb-neutral-300))
+      ),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)),
+        rgb(var(--stb-neutral-300))
+      ),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)),
+        rgb(var(--stb-neutral-300))
+      ),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)) 1px,
+        rgb(18, 33, 69) 1px,
+        rgb(39, 38, 41) 22px,
+        rgb(var(--stb-neutral-300)) 20px
+      ),
+      url("../img/collections/dark-bg.jpg");
+
+    background-repeat: no-repeat;
+    background-size: 38px 34px, 38px 34px, 41px 35px, 52px 8px, 41px 35px,
+      calc(100% - 80px) 2px, 1px calc(100% - 70px), 1px calc(100% - 70px),
+      calc(100% - 62px) 23px, calc(100% - 4px) calc(100% - 15px);
+    background-position: top -1px left, top -1px right, bottom 6px right,
+      bottom center, bottom 6px left, center bottom 6px, bottom 38px right 1px,
+      top 31px left 1px, top center, center;
+  }
+
+  &__front {
+    background-image: url("../img/collections/top-left-deco.svg"),
+      url("../img/collections/top-right-deco.svg"),
+      url("../img/collections/down-right-deco.svg"),
+      url("../img/collections/down-center-deco.svg"),
+      url("../img/collections/down-left-deco.svg"),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)),
+        rgb(var(--stb-neutral-300))
+      ),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)),
+        rgb(var(--stb-neutral-300))
+      ),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)),
+        rgb(var(--stb-neutral-300))
+      ),
+      linear-gradient(
+        0deg,
+        rgb(var(--stb-neutral-300)) 1px,
+        rgb(18, 33, 69) 1px,
+        rgb(39, 38, 41) 22px,
+        rgb(var(--stb-neutral-300)) 20px
+      ),
+      url("../img/collections/hera.jpg");
+
+    background-repeat: no-repeat;
+    background-size: 38px 34px, 38px 34px, 41px 35px, 52px 8px, 41px 35px,
+      calc(100% - 80px) 2px, 1px calc(100% - 70px), 1px calc(100% - 70px),
+      calc(100% - 62px) 23px, calc(100% - 4px) calc(100% - 15px);
+    background-position: top -1px left, top -1px right, bottom 6px right,
+      bottom center, bottom 6px left, center bottom 6px, bottom 38px right 1px,
+      top 31px left 1px, top center, center;
+
+    transform: rotateY(180deg);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 36px;
+    height: 32px;
+    mask-size: 36px 32px;
+    mask-repeat: no-repeat;
+    background-color: #0b101e;
+  }
+
+  &::before {
+    top: -5px;
+    left: -2px;
+    mask-image: url("../img/collections/top-left-corner.svg");
+    mask-position: top left;
+  }
+
+  &::after {
+    top: -5px;
+    right: -2px;
+    mask-image: url("../img/collections/top-right-corner.svg");
+    mask-position: top right;
   }
 
   // &__picture {
@@ -224,7 +275,7 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: auto auto 8px;
+    margin: auto auto 16px;
     padding: 7px 12px;
     background-image: radial-gradient(
       100% 100% at 50% 0%,
