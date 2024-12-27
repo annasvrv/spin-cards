@@ -9,18 +9,17 @@
   color: #fff;
 
   &__title {
-    color: #f5f5f5;
-    text-align: center;
     font-size: 32px;
     letter-spacing: 2px;
+    text-align: center;
+    color: #f5f5f5;
 
     &::after {
-      content: "";
       display: block;
       padding-top: 20px;
+      margin-inline: auto;
       width: 100%;
       height: auto;
-      margin-inline: auto;
       background-image: url("../img/collections/title-bottom-decor.svg"),
         linear-gradient(to right, transparent, rgb(57, 70, 86), transparent),
         url("../img/collections/electro-bg-title.webp");
@@ -28,12 +27,13 @@
       background-size: 13px 7px, 100% 1px, 100% 64px;
       background-repeat: no-repeat;
       pointer-events: none;
+      content: "";
     }
   }
 
   &__description {
-    text-align: center;
     font-size: 14px;
+    text-align: center;
   }
 
   &__description-text {
@@ -42,8 +42,8 @@
 
   &__description-price {
     margin-block: 8px 20px;
-    color: rgb(var(--stb-yellow-250));
     font-size: 28px;
+    color: rgb(var(--stb-yellow-250));
   }
 
   &__description-link {
@@ -65,33 +65,22 @@
   }
 
   &__header {
-    // position: relative;
     display: grid;
     gap: 8px;
     align-items: center;
     padding: 50px 72px;
+    color: #f5f5f5;
     background: url("../img/collections/collection-banner-gods.jpg");
     background-size: cover;
     background-position: center;
-    color: #f5f5f5;
     border-radius: 12px;
   }
 
-  // &__banner {
-  //   position: absolute;
-  //   inset: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   border-radius: 12px;
-  // }
-
   &__title {
-    // position: relative;
     font-size: 28px;
   }
 
   &__decription {
-    // position: relative;
     font-size: 14px;
   }
 
@@ -112,8 +101,6 @@
     position: relative;
     width: 182px;
     height: 320px;
-    // width: 100%;
-    // height: 100%;
     border-radius: 25px;
     background-color: #0b101e;
     perspective: 1000px;
@@ -125,36 +112,35 @@
 }
 
 .carte {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 
   &__back,
   &__front {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    position: absolute;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
 
     &:before {
-      content: " ";
-      display: block;
       position: absolute;
       z-index: 1;
+      display: block;
       width: 100%;
       height: 100%;
       background-image: url("../img/collections/top-left-deco.svg"),
         url("../img/collections/top-right-deco.svg"),
-        url("../img/collections/down-right-deco.svg"),
-        url("../img/collections/down-center-deco.svg"),
-        url("../img/collections/down-left-deco.svg"),
+        url("../img/collections/bottom-right-deco.svg"),
+        url("../img/collections/bottom-center-deco.svg"),
+        url("../img/collections/bottom-left-deco.svg"),
         linear-gradient(
           0deg,
           rgb(var(--stb-neutral-350)),
@@ -174,17 +160,18 @@
           0deg,
           rgb(var(--stb-neutral-350)) 1px,
           rgb(18, 33, 69) 1px,
-          rgb(39, 38, 41) 22px,
-          rgb(var(--stb-neutral-350)) 22px
+          rgb(39, 38, 41) 20px,
+          rgb(var(--stb-neutral-350)) 20px
         );
 
       background-repeat: no-repeat;
       background-size: 38px 34px, 38px 34px, 41px 35px, 52px 8px, 41px 35px,
-        calc(100% - 78px) 2px, 1px calc(100% - 70px), 1px calc(100% - 70px),
-        calc(100% - 60px) 23px;
-      background-position: top left -1px, top right -1px, bottom 6px right -1px,
-        bottom center, bottom 6px left -1px, center bottom 6px,
-        bottom 38px right, top 31px left, top center;
+        calc(100% - 78px) 2px, 1px calc(100% - 65px), 1px calc(100% - 65px),
+        calc(100% - 60px) 22px;
+      background-position: top -2px left -1px, top -2px right -1px,
+        bottom 6px right -1px, bottom center, bottom 6px left -1px,
+        center bottom 6px, bottom 38px right, bottom 38px left, top -1px center;
+      content: " ";
     }
   }
 
@@ -196,12 +183,11 @@
     width: 100%;
     height: calc(100% - 4px);
     background-color: inherit;
-    // object-fit: contain;
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     mask-image: linear-gradient(rgb(var(--stb-white)) 0 0),
       url("../img/collections/top-left-corner.svg"),
       url("../img/collections/top-right-corner.svg");
-    mask-size: cover, 36px 26px, 36px 26px;
+    mask-size: cover, 32px 24px, 32px 24px;
     mask-position: 0 0, top -1px left -1px, top -1px right -1px;
     mask-repeat: no-repeat;
     mask-composite: exclude;
@@ -213,10 +199,10 @@
     inset-inline: 0;
     display: flex;
     gap: 2px;
-    margin: 0 auto;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin: 0 auto;
     padding-inline: 4px;
     padding-block: 1px;
   }
@@ -232,11 +218,10 @@
   }
 
   &__button {
+    all: unset;
     position: absolute;
     bottom: 0;
     inset-inline: 0;
-    all: unset;
-    box-sizing: border-box;
     display: flex;
     gap: 8px;
     justify-content: center;
@@ -257,16 +242,15 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 25px;
+    box-sizing: border-box;
     cursor: pointer;
 
     &::after {
-      content: " ";
+      position: absolute;
+      inset: calc(-1 * width);
       display: block;
       width: 100%;
       height: 40px;
-      position: absolute;
-      inset: calc(-1 * width);
-      pointer-events: none;
       border-radius: inherit;
       background-image: url("../img/collections/carte-btn-left.svg"),
         linear-gradient(
@@ -280,6 +264,8 @@
         calc(100% - 44px) 1px;
       background-repeat: no-repeat;
       background-position: left, top center, right, bottom center;
+      pointer-events: none;
+      content: " ";
     }
   }
 
