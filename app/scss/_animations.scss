@@ -1,0 +1,27 @@
+.rotate-card {
+  -webkit-animation: rotate-card 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s
+    4 alternate both;
+  animation: rotate-card 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s 4
+    alternate both;
+}
+
+@-webkit-keyframes rotate-card {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+@keyframes rotate-card {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
