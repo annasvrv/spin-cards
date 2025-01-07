@@ -5,10 +5,31 @@
 @import "libs";
 @import "media";
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 16px;
   min-width: 320px;
   line-height: 1.4;
 }
 
-// ALWAYS END
+.container {
+  border: 2px solid #000;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+}
