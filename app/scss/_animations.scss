@@ -18,116 +18,11 @@
 
 @keyframes gradient-transformation {
   0% {
-    background: radial-gradient(
-      104.85% 100% at 50% 0%,
-      #ffc700 0%,
-      #d9295e 100%
-    );
+    background: #d9295e;
   }
-  //   5% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 5%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  //   10% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 10%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  //   15% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 15%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  //   20% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 20%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  25% {
-    background: radial-gradient(
-      104.85% 100% at 50% 25%,
-      #ffc700 0%,
-      #d9295e 100%
-    );
-  }
-  //   30% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 30%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  //   35% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 35%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  //   40% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 40%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  //   45% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 45%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  50% {
-    background: radial-gradient(
-      104.85% 100% at 50% 50%,
-      #ffc700 0%,
-      #d9295e 100%
-    );
-  }
-  //   60% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 60%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  70% {
-    background: radial-gradient(
-      104.85% 100% at 50% 70%,
-      #ffc700 0%,
-      #d9295e 100%
-    );
-  }
-  //   80% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 80%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
-  //   90% {
-  //     background: radial-gradient(
-  //       104.85% 100% at 50% 90%,
-  //       #ffc700 0%,
-  //       #d9295e 100%
-  //     );
-  //   }
+
   100% {
-    background: radial-gradient(
-      104.85% 100% at 50% 100%,
-      #ffc700 0%,
-      #d9295e 100%
-    );
+    background: #ffc700;
   }
 }
 
@@ -140,16 +35,172 @@
   }
 }
 
-// in progress
-// @keyframes border-transformation {
+@keyframes border-transformation {
+  0%,
+  100% {
+    box-shadow: 0px 2px 3px 0px rgba(165, 0, 89, 0.8),
+      0px 4px 10px 0px rgba(165, 0, 89, 0.6),
+      0px -2px 4px 0px rgba(255, 255, 255, 0.5) inset;
+  }
+  25% {
+    box-shadow: -2px 0px 3px 0px rgba(165, 0, 89, 0.8),
+      -4px 0px 10px 0px rgba(165, 0, 89, 0.6),
+      2px 0px 4px 0px rgba(255, 255, 255, 0.5) inset;
+  }
+  50% {
+    box-shadow: 0px -2px 3px 0px rgba(165, 0, 89, 0.8),
+      0px -4px 10px 0px rgba(165, 0, 89, 0.6),
+      0px 2px 4px 0px rgba(255, 255, 255, 0.5) inset;
+  }
+  75% {
+    box-shadow: 2px 0px 3px 0px rgba(165, 0, 89, 0.8),
+      4px 0px 10px 0px rgba(165, 0, 89, 0.6),
+      -2px 0px 4px 0px rgba(255, 255, 255, 0.5) inset;
+  }
+}
+
+@keyframes spark-1 {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+@keyframes spark-2 {
+  to {
+    stroke-dashoffset: -500;
+  }
+}
+@keyframes fly-up {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.2);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(-1.5rem) scale(0.4);
+  }
+  10%,
+  100% {
+    opacity: 0;
+    transform: translateY(-3rem) scale(0.2);
+  }
+}
+// @keyframes fly-down {
 //   0% {
-//     box-shadow: 0px 2px 3px 0px rgba(165, 0, 89, 0.8),
-//       0px 4px 10px 0px rgba(165, 0, 89, 0.6),
-//       0px -2px 4px 0px rgba(255, 255, 255, 0.5) inset;
+//     opacity: 0;
+//     transform: translateY(0) scale(0.2);
 //   }
+//   5% {
+//     opacity: 1;
+//     transform: translateY(1.5rem) scale(0.4);
+//   }
+//   10%,
 //   100% {
-//     box-shadow: 0px 2px 3px 0px rgba(165, 0, 89, 0.8),
-//       0px 4px 10px 0px rgba(165, 0, 89, 0.6),
-//       0px -2px 4px 0px rgba(255, 255, 255, 0.5) inset;
+//     opacity: 0;
+//     transform: translateY(3rem) scale(0.2);
 //   }
 // }
+
+@keyframes bounce-up-btn {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes text-background {
+  0%,
+  100% {
+    background: linear-gradient(
+      180deg,
+      rgb(248, 249, 255) 0%,
+      rgb(248, 249, 255) 50%,
+      rgb(235, 154, 154) 50%,
+      rgb(235, 154, 154) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: linear-gradient(
+      180deg,
+      rgb(235, 154, 154) 0%,
+      rgb(235, 154, 154) 25%,
+      rgb(248, 249, 255) 25%,
+      rgb(248, 249, 255) 75%,
+      rgb(235, 154, 154) 75%,
+      rgb(235, 154, 154) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(
+      180deg,
+      rgb(235, 154, 154) 0%,
+      rgb(235, 154, 154) 50%,
+      rgb(248, 249, 255) 50%,
+      rgb(248, 249, 255) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: linear-gradient(
+      180deg,
+      rgb(248, 249, 255) 0%,
+      rgb(248, 249, 255) 25%,
+      rgb(235, 154, 154) 25%,
+      rgb(235, 154, 154) 75%,
+      rgb(248, 249, 255) 75%,
+      rgb(248, 249, 255) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes evil-btn {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

@@ -57,7 +57,74 @@ img {
 .btn-item {
   position: relative;
 
-  // display: grid;
+  .storm-icon {
+    display: block;
+    position: absolute;
+    top: -0.75em;
+    left: -0.25em;
+    width: calc(100% + 0.5em);
+    height: calc(100% + 1.5em);
+    pointer-events: none;
+    transition: opacity 0.4s;
+    transition-delay: 0.1s;
+    path {
+      stroke-dasharray: 100;
+      filter: url("#glow");
+      &.line-1 {
+        stroke: #ffc700;
+        stroke-dashoffset: 0;
+        animation: spark-1 6s linear infinite;
+      }
+      &.line-2 {
+        stroke: #d9295e;
+        stroke-dashoffset: 500;
+        animation: spark-2 6s linear infinite;
+      }
+    }
+  }
+
+  .dots {
+    transition: opacity 0.3s;
+    transition-delay: 0.4s;
+    .dot {
+      width: 1rem;
+      height: 1rem;
+      background: white;
+      border-radius: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+    .dot-1 {
+      top: 0;
+      left: 20%;
+      animation: fly-up 3s linear infinite;
+    }
+    .dot-2 {
+      top: 0;
+      left: 55%;
+      animation: fly-up 3s linear infinite;
+      animation-delay: 0.5s;
+    }
+    .dot-3 {
+      top: 0;
+      left: 80%;
+      animation: fly-up 3s linear infinite;
+      animation-delay: 1s;
+    }
+    .dot-4 {
+      bottom: 0;
+      left: 30%;
+      animation: fly-up 3s linear infinite;
+      animation-delay: 2.5s;
+    }
+    .dot-5 {
+      bottom: 0;
+      left: 65%;
+      animation: fly-up 3s linear infinite;
+      animation-delay: 1.5s;
+    }
+  }
+
   &--animation-1 {
     animation: pulse-animation-compression 0.5s ease-in-out infinite alternate;
 
@@ -84,9 +151,9 @@ img {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-style: italic;
-    // color: #f6f7ff;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
 
     &--primary {
       max-width: fit-content;
@@ -100,12 +167,32 @@ img {
         0px -2px 4px 0px rgba(255, 255, 255, 0.5) inset;
     }
 
+    #btn {
+      transition: 01s;
+    }
+
+    &--animation-7 {
+      &:hover {
+        // opacity: 0;
+        animation: evil-btn 0.5s ease infinite alternate both;
+      }
+    }
+
     &--animation-2 {
-      animation: gradient-transformation 1s ease infinite both;
+      animation: gradient-transformation 6s ease-in-out infinite alternate both;
     }
 
     &--animation-3 {
-      animation: border-radius-transformation 0.5s ease infinite alternate both;
+      animation: border-radius-transformation 2s ease-in-out infinite alternate
+        both;
+    }
+
+    &--animation-4 {
+      animation: border-transformation 5s linear infinite both;
+    }
+
+    &--animation-5 {
+      animation: bounce-up-btn 5s ease-in-out alternate both;
     }
 
     &::after {
@@ -129,8 +216,6 @@ img {
       border-radius: inherit;
       border: 2px solid rgba(236, 71, 120, 0.3);
       color: rgb(248, 249, 255);
-      // text-shadow: unset;
-      // text-shadow: 0 2px 3px #a50059cc;
       background: linear-gradient(
         180deg,
         rgb(248, 249, 255) 0%,
@@ -141,7 +226,11 @@ img {
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0px 2px 3px 0px rgba(165, 0, 89, 0.8));
+      filter: drop-shadow(0px 2px 3px rgba(165, 0, 89, 0.8));
+    }
+
+    &--animation-6 {
+      animation: text-background 5s linear infinite;
     }
   }
 }
