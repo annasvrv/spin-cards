@@ -222,6 +222,16 @@ img {
       filter: drop-shadow(0px 2px 3px rgba(165, 0, 89, 0.8));
     }
 
+    &:hover .top {
+      top: -10px;
+      transition-delay: 0.35s;
+    }
+
+    &:hover .bottom {
+      bottom: -10px;
+      transition-delay: 0.35s;
+    }
+
     &--animation-6 {
       animation: text-background 5s linear infinite;
     }
@@ -255,6 +265,21 @@ img {
     box-shadow: 0px 2px 3px 0px rgba(165, 0, 89, 0.8),
       0px 4px 10px 0px rgba(165, 0, 89, 0.6),
       0px -2px 4px 0px rgba(255, 255, 255, 0.5) inset;
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/btn-pattern.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+    opacity: 0.2;
+    content: " ";
   }
 
   &:hover .top {
@@ -330,6 +355,7 @@ img {
   box-shadow: var(--stb-shadow-50);
   background: rgb(var(--stb-black));
   background-image: var(--stb-gradient-100);
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -359,4 +385,28 @@ img {
     filter: none;
     opacity: 1;
   }
+
+  &__animation {
+    overflow: hidden;
+
+    // need to fix animation
+    &::before {
+      position: absolute;
+      inset-block: 0;
+      left: -100%;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: url("../img/button/blick.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: glare 0.5s linear infinite;
+      content: "";
+    }
+  }
+
+  // &:hover .ally-btn__animation::before {
+  // }
 }
