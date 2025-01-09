@@ -311,3 +311,52 @@ img {
     }
   }
 }
+
+.ally-btn {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  padding: 10px 24px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--stb-button-text-dark);
+  text-shadow: 2px 2px 0px #fff;
+  border: 3px solid rgb(var(--stb-black));
+  border-radius: 12px;
+  box-shadow: var(--stb-shadow-50);
+  background: rgb(var(--stb-black));
+  background-image: var(--stb-gradient-100);
+
+  &::before,
+  &::after {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &::before {
+    z-index: -1;
+    margin: 6px;
+    border-radius: 5px;
+    background-image: var(--stb-button-primary);
+  }
+
+  &::after {
+    background-image: url("../img/button/shape-left.svg"),
+      url("../img/button/shape-right.svg"),
+      url("../img/button/shape-center-1.svg"),
+      url("../img/button/shape-center-2.svg");
+    background-size: 32px calc(100% - 5px * 2), 32px calc(100% - 5px * 2),
+      calc(50% - 32px - 5px) calc(100% - 5px * 2),
+      calc(50% - 32px - 5px) calc(100% - 5px * 2);
+    background-position: 5px 5px, calc(100% - 5px) 5px, calc(32px + 5px) 5px,
+      calc(100% - 32px - 5px) 5px;
+    filter: none;
+    opacity: 1;
+  }
+}
