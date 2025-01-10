@@ -239,3 +239,29 @@
     transform: translate(250% 0);
   }
 }
+
+@keyframes preloader-scaling {
+  10% {
+    scale: 1;
+  }
+  33% {
+    scale: 1.12;
+  }
+  66% {
+    scale: 1.12;
+  }
+  90% {
+    scale: 1;
+  }
+}
+
+@keyframes moving-glare {
+  0%,
+  40% {
+    translate: 0 0;
+  }
+  60%,
+  100% {
+    translate: var(--stb-page-preloader-translate) 0;
+  }
+}
