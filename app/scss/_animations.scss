@@ -230,14 +230,13 @@
 
 // need to fix animation
 @keyframes glare {
-  0% {
-    opacity: 0;
+  0%,
+  40% {
+    transform: translate(0, 0);
   }
-  50% {
-    opacity: 1;
-  }
+
+  60%,
   100% {
-    left: 100%;
-    opacity: 0;
+    transform: translate(250% 0);
   }
 }
