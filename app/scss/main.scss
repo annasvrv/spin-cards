@@ -415,33 +415,15 @@ img {
 .preloader {
   --stb-page-preloader-translate: 318px; /* 242 + 76 */
 
-  // position: fixed;
-  overflow: hidden;
+  position: relative;
+  // overflow: hidden;
   inset: 0;
-  z-index: 10;
+  // z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  // background: radial-gradient(50% 50% at 50% 50%, rgb(112 33 66) 0%, rgb(71 16 29) 100%),
-  //   rgb(71 16 29);
-  // direction: ltr;
+  padding: 20px;
 }
-
-// .preloader::before {
-//   content: '';
-//   position: fixed;
-//   width: 902px;
-//   height: 929px;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   background-image: url('assets/images/page-bg.png');
-//   background-image: image-set(
-//     'assets/images/page-bg.png' 1x,
-//     'assets/images/page-bg@2x.png' 2x
-//   );
-//   z-index: -1;
-// }
 
 .preloader__container {
   position: relative;
@@ -450,6 +432,7 @@ img {
   animation: preloader-scaling 4s ease-in-out infinite;
 }
 
+// logo svg
 .preloader__logo {
   position: relative;
   z-index: 1;
@@ -457,16 +440,17 @@ img {
   height: 100%;
 }
 
+// glare div
 .preloader__mask {
   position: absolute;
-  // overflow: hidden;
   inset: 0;
   z-index: 2;
-  mask-image: url("../img/preloader-glare.svg");
+  mask-image: url("../img/preloader/preloader-mask.svg");
   mask-repeat: no-repeat;
   mask-size: cover;
 }
 
+// text blicks svg
 .preloader__decoration {
   position: absolute;
   inset: 0;
@@ -475,12 +459,12 @@ img {
   height: 100%;
 }
 
+// glare svg
 .preloader__glare {
   position: absolute;
-  // overflow: hidden;
   width: 76px;
-  height: 64px;
+  height: 60px;
   left: -76px;
   top: 0;
-  animation: moving-glare 10s linear infinite;
+  animation: moving-glare 4s linear infinite;
 }
