@@ -1,0 +1,658 @@
+:root {
+  // black&white
+  --stb-black: 9 8 12; // #09080C
+  --stb-white: 255 255 255; // #FFF
+
+  // neutral
+  --stb-neutral-50: 239 242 245; // #EFF2F5
+  --stb-neutral-100: 231 231 237; // #E7EAED
+  --stb-neutral-150: 219 220 228; // #DBDCE4
+  --stb-neutral-200: 189 197 212; // #BDC5D4
+  --stb-neutral-300: 161 173 199; // #A1ADC7
+  --stb-neutral-400: 81 88 99; // #515863
+  --stb-neutral-500: 62 63 90; // #3E3F5A
+  --stb-neutral-550: 49 57 100; // #313964
+  --stb-neutral-600: 56 52 101; // #383465
+  --stb-neutral-650: 45 45 77; // #2D2D4D
+  --stb-neutral-700: 34 38 53; // #222635
+  --stb-neutral-750: 39 39 68; // #272744
+  --stb-neutral-800: 28 28 49; // #1C1C32
+  --stb-neutral-850: 20 23 52; // #141734
+  --stb-neutral-900: 17 19 42; // #11132A
+  --stb-neutral-950: 4 4 30; // #04041E
+  --stb-neutral-1000: 14 15 29; // #0E0F1D
+  --stb-neutral-1050: 22 24 48; // #161830
+  --stb-neutral-1075: 25 26 55; // #191A37
+
+  // brand
+  --stb-brand-50: 241 247 255; // #F1F7FF
+  --stb-brand-100: 227 238 254; // #E3EEFE
+  --stb-brand-120: 202 243 255; // #CAF3FF
+  --stb-brand-150: 195 219 254; // #C3DBFE
+  --stb-brand-160: 165 200 255; // #A5C8FF
+  --stb-brand-180: 104 165 230; // #68A5E6
+  --stb-brand-190: 0 183 255; // #00B7FF
+  --stb-brand-195: 56 213 241; // #38D5F1
+  --stb-brand-200: 0 123 247; // #007BF7
+  --stb-brand-250: 82 137 255; // #5289FF
+  --stb-brand-300: 1 101 223; // #0165DF
+  --stb-brand-350: 24 62 189; // #183EBD
+  --stb-brand-400: 15 0 223; // #0F00DF
+  --stb-brand-500: 25 54 152; // #193698
+  --stb-brand-550: 39 58 109; // #273A6D
+  --stb-brand-560: 25 39 100; // #192764
+  --stb-brand-600: 5 32 123; // #05207B
+  --stb-brand-650: 2 27 111; // #021B6F
+  --stb-brand-700: 6 22 78; // #06164E
+  --stb-brand-750: 5 19 67; // #051343
+  --stb-brand-800: 39 39 109; // #27276D
+  --stb-brand-900: 15 18 59; // #0F123B
+  --stb-brand-950: 13 6 29; // #0D061D
+  --stb-brand-970: var(--stb-brand-950) / 0.5; // #0D061D / 2
+  --stb-brand-1000: 19 23 69; // #131745
+
+  // green
+  --stb-green-400: 153 255 213; // #99FFD5
+  --stb-green-425: 88 255 185; // #58FFB9
+  --stb-green-450: 0 223 130; // #00DF82
+  --stb-green-500: 0 255 115; // #00FF73
+  --stb-green-600: 0 170 99; // #00AA63
+  --stb-green-700: 3 98 76; // #03624C
+  --stb-green-900: 1 32 25; // #012019
+
+  // red
+  --stb-red-500: 230 106 135; // #E66A87
+  --stb-red-550: 238 74 95; // #EE4A5F
+  --stb-red-600: 245 42 54; // #F52A36
+  --stb-red-800: 160 40 40; // #A02828
+  --stb-red-900: 255 89 0; // #FF5900
+  --stb-red-950: 158 0 0; // #9E0000
+  --stb-red-1000: 38 0 0; // #260000
+
+  // yellow
+  --stb-yellow-500: 225 217 59; // #E1D93B
+  --stb-yellow-600: 157 152 41; // #9D9829
+  --stb-yellow-800: 111 108 28; // #6F6C1C
+  --stb-yellow-900: 24 24 0; // #181800
+
+  // system
+  --stb-system: linear-gradient(
+      90deg,
+      rgb(5 32 123 / 0) 0%,
+      rgb(5 32 123 / 0.2) 61.46%,
+      rgb(5 32 123 / 0) 100%
+    ),
+    rgb(var(--stb-neutral-1000));
+  --stb-system-light: linear-gradient(
+      90deg,
+      rgb(62 63 90 / 0) 0%,
+      rgb(62 63 90 / 0.32) 61.46%,
+      rgb(62 63 90 / 0) 100%
+    ),
+    rgb(var(--stb-neutral-750));
+
+  // functional
+  --stb-functional-done: rgb(var(--stb-green-500));
+  --stb-functional-warning: rgb(var(--stb-yellow-500));
+  --stb-functional-error: rgb(var(--stb-red-600));
+  --stb-functional-alert: rgb(var(--stb-red-500));
+  --stb-functional-info: rgb(var(--stb-brand-200));
+
+  // other
+  --stb-other-icon-50: rgb(var(--stb-brand-160));
+  --stb-other-icon-100: rgb(var(--stb-neutral-300));
+  --stb-other-icon-400: rgb(var(--stb-green-500));
+  --stb-other-icon-500: rgb(var(--stb-brand-300));
+  --stb-other-icon-800: rgb(var(--stb-brand-100));
+  --stb-other-icon-1000: rgb(var(--stb-brand-950));
+
+  // stroke
+  --stb-stroke-game-card: rgb(var(--stb-neutral-500));
+  --stb-stroke-divider: rgb(var(--stb-neutral-650));
+  --stb-stroke-modal: rgb(var(--stb-neutral-550));
+  --stb-stroke-menu-item: rgba(var(--stb-brand-300) / 0.2);
+
+  // input
+  --stb-input-fill: rgb(var(--stb-neutral-900));
+  --stb-input-fill-hover: radial-gradient(
+    87.18% 100% at 50.12% 0%,
+    rgb(var(--stb-brand-700)) 0%,
+    rgb(var(--stb-neutral-900)) 100%
+  );
+  --stb-input-stroke: rgb(var(--stb-neutral-650));
+  --stb-input-stroke-hover: rgb(var(--stb-brand-500));
+  --stb-input-stroke-selected: rgb(var(--stb-brand-350));
+
+  // background
+  --stb-bg-primary: rgb(var(--stb-neutral-1000));
+  --stb-bg-primary-pattern: url(/assets/images/_global/noise.png) repeat,
+    url(/assets/images/_global/noise.png) repeat, rgb(var(--stb-neutral-1000));
+  --stb-bg-secondary: radial-gradient(
+    79.23% 92.97% at 50% 7.03%,
+    rgb(var(--stb-neutral-650)) 0%,
+    rgb(var(--stb-neutral-850)) 100%
+  );
+  --stb-bg-secondary-pattern: url(/assets/images/_global/noise.png) repeat,
+    radial-gradient(
+      79.23% 92.97% at 50% 7.03%,
+      rgb(var(--stb-neutral-650)) 0%,
+      rgb(var(--stb-neutral-850)) 100%
+    );
+  --stb-bg-tertiary: rgb(var(--stb-neutral-800));
+  --stb-bg-fourth: rgb(var(--stb-brand-200));
+  --stb-bg-contrast-primary: rgb(var(--stb-brand-800));
+  --stb-bg-contrast-secondary: url(/assets/images/_global/noise.png) repeat,
+    radial-gradient(79.35% 92.97% at 49.93% 7.03%, #272744 0%, #151940 100%);
+  --stb-bg-contrast-tertiary: linear-gradient(
+    180deg,
+    rgb(var(--stb-brand-400)) -51.35%,
+    rgb(var(--stb-brand-700)) 100%
+  );
+  --stb-bg-popup: linear-gradient(
+      0deg,
+      rgb(15 18 59 / 0.96) 0%,
+      rgb(15 18 59 / 0.96) 100%
+    ),
+    url("/assets/images/_global/noise.png") repeat;
+
+  // link
+  --stb-link-primary: rgb(var(--stb-neutral-100));
+  --stb-link-primary-hover: rgb(var(--stb-brand-180));
+  --stb-link-primary-active: rgb(var(--stb-brand-190));
+  --stb-link-secondary: rgb(var(--stb-neutral-300));
+  --stb-link-secondary-hover: rgb(var(--stb-neutral-100));
+  --stb-link-secondary-active: rgb(var(--stb-neutral-300));
+  --stb-link-tertiary: rgb(var(--stb-neutral-400));
+  --stb-link-accent: rgb(var(--stb-brand-180));
+  --stb-link-accent-hover: rgb(var(--stb-brand-190));
+  --stb-link-alert: rgb(var(--stb-red-500));
+  --stb-link-alert-hover: rgb(var(--stb-red-600));
+
+  // button
+  --stb-button-primary: linear-gradient(
+    270deg,
+    rgb(var(--stb-green-600)) 0%,
+    rgb(var(--stb-green-500)) 50%,
+    rgb(var(--stb-green-600)) 100%
+  );
+  --stb-button-primary-hover: linear-gradient(
+    270deg,
+    #03624c 0%,
+    #18e173 50%,
+    #03624c 100%
+  );
+  --stb-button-primary-active: linear-gradient(
+    270deg,
+    #03624c 0%,
+    #18e173 50%,
+    #03624c 100%
+  );
+  --stb-button-secondary: linear-gradient(
+    270deg,
+    rgb(var(--stb-brand-600)) 0%,
+    rgb(var(--stb-brand-300)) 50%,
+    rgb(var(--stb-brand-600)) 100%
+  );
+  --stb-button-secondary-hover: linear-gradient(
+      180deg,
+      rgba(var(--stb-brand-600) / 0.88) 0%,
+      rgba(var(--stb-brand-400) / 0.88) 100%
+    ),
+    rgb(var(--stb-brand-400));
+  --stb-button-secondary-active: linear-gradient(
+      180deg,
+      rgba(var(--stb-brand-600) / 0.88) 0%,
+      rgba(var(--stb-brand-400) / 0.88) 100%
+    ),
+    rgb(var(--stb-brand-400));
+  --stb-button-tertiary: radial-gradient(
+    93.41% 68.63% at 25.18% 31.37%,
+    rgb(var(--stb-neutral-500)) 0%,
+    rgb(var(--stb-neutral-650)) 100%
+  );
+  --stb-button-tertiary-hover: radial-gradient(
+    79.23% 92.97% at 50% 7.03%,
+    rgb(var(--stb-neutral-650)) 0%,
+    rgb(var(--stb-neutral-850)) 100%
+  );
+  --stb-button-tertiary-active: radial-gradient(
+    79.23% 92.97% at 50% 7.03%,
+    rgb(var(--stb-neutral-650)) 0%,
+    rgb(var(--stb-neutral-850)) 100%
+  );
+  --stb-button-disable: radial-gradient(
+    79.23% 92.97% at 50% 7.03%,
+    var(--Neutral-Neutral-650, rgb(45 45 77 / 0.5)) 0%,
+    rgba(var(--stb-neutral-850) / 0.5) 100%
+  );
+  --stb-button-text-bright: rgb(var(--stb-neutral-50));
+  --stb-button-text-middle: rgb(var(--stb-neutral-300));
+  --stb-button-text-dark: rgb(var(--stb-brand-950));
+
+  // text
+  --stb-text-primary: rgb(var(--stb-neutral-50));
+  --stb-text-secondary: rgb(var(--stb-neutral-300));
+  --stb-text-contrast-primary: rgb(var(--stb-brand-950));
+  --stb-text-contrast-secondary: rgb(var(--stb-neutral-400));
+  --stb-text-accent-green: rgb(var(--stb-green-450));
+  --stb-text-accent-blue: rgb(var(--stb-brand-180));
+  --stb-text-accent-blue-light: rgb(var(--stb-brand-190));
+
+  // gradient
+  --stb-gradient-linear-200: linear-gradient(
+    180deg,
+    rgb(var(--stb-neutral-950)) 0%,
+    rgb(var(--stb-neutral-800)) 100%
+  );
+  --stb-gradient-linear-250: linear-gradient(
+    0deg,
+    rgb(var(--stb-neutral-900)) 0.02%,
+    rgb(var(--stb-brand-900)) 134.59%
+  );
+  --stb-gradient-radial-300: radial-gradient(
+    79.23% 92.97% at 50% 7.03%,
+    rgb(var(--stb-neutral-650)) 0%,
+    rgb(var(--stb-neutral-850)) 100%
+  );
+  --stb-gradient-linear-330: linear-gradient(
+    182deg,
+    rgb(var(--stb-neutral-650)) 1.84%,
+    rgb(var(--stb-neutral-850)) 98.15%
+  );
+  --stb-gradient-radial-350: radial-gradient(
+    93.41% 68.63% at 25.18% 31.37%,
+    rgb(var(--stb-neutral-500)) 0%,
+    rgb(var(--stb-neutral-650)) 100%
+  );
+  --stb-gradient-radial-360: radial-gradient(
+    93.41% 68.63% at 25.18% 31.37%,
+    rgb(var(--stb-neutral-550)) 0%,
+    rgb(var(--stb-neutral-750)) 100%
+  );
+  --stb-gradient-radial-400: radial-gradient(
+    87.18% 100% at 50.12% 0%,
+    rgb(var(--stb-neutral-900)) 0%,
+    rgb(var(--stb-brand-700)) 100%
+  );
+  --stb-gradient-radial-450: radial-gradient(
+    87.18% 100% at 50.12% 0%,
+    rgb(var(--stb-brand-700)) 0%,
+    rgb(var(--stb-neutral-900)) 100%
+  );
+  --stb-gradient-linear-500: linear-gradient(
+    180deg,
+    rgb(var(--stb-brand-400)) -71.09%,
+    rgb(var(--stb-brand-700)) 89.13%
+  );
+  --stb-gradient-linear-550: linear-gradient(
+    180deg,
+    rgb(var(--stb-brand-400)) 0%,
+    rgb(var(--stb-brand-700)) 93.65%
+  );
+  --stb-gradient-linear-575: linear-gradient(
+    180deg,
+    rgb(var(--stb-brand-650)) 11.5%,
+    rgb(var(--stb-brand-600)) 98.5%
+  );
+  --stb-gradient-linear-600: linear-gradient(
+    242deg,
+    rgb(var(--stb-brand-400)) -0.3%,
+    rgb(13 6 29 / 0) 98.18%
+  );
+  --stb-gradient-radial-650: radial-gradient(
+    147.1% 70.75% at 50% 29.25%,
+    rgb(15 0 223 / 0.36) 11.5%,
+    rgb(13 6 29 / 0) 100%
+  );
+  --stb-gradient-linear-700: linear-gradient(
+    270deg,
+    rgb(var(--stb-brand-600)) 0%,
+    rgb(var(--stb-brand-300)) 50%,
+    rgb(var(--stb-brand-600)) 100%
+  );
+  --stb-gradient-linear-702: linear-gradient(
+    270deg,
+    rgb(var(--stb-brand-400)) 0%,
+    rgb(var(--stb-brand-200)) 50%,
+    rgb(var(--stb-brand-400)) 100%
+  );
+  --stb-gradient-linear-705: linear-gradient(
+    0deg,
+    rgb(var(--stb-brand-600)) 0%,
+    rgb(var(--stb-brand-300)) 23%,
+    rgb(var(--stb-brand-600)) 100%
+  );
+  --stb-gradient-linear-710: linear-gradient(
+    270deg,
+    rgba(var(--stb-brand-600) / 0.16) 0%,
+    rgba(var(--stb-brand-300) / 0.16) 50%,
+    rgba(var(--stb-brand-600) / 0.16) 100%
+  );
+  --stb-gradient-linear-725: linear-gradient(
+    270deg,
+    rgba(var(--stb-brand-600) / 0.12) 0%,
+    rgba(var(--stb-brand-300) / 0.12) 50%,
+    rgba(var(--stb-brand-600) / 0.12) 100%
+  );
+  --stb-gradient-linear-750: linear-gradient(
+      49deg,
+      rgb(202 243 255 / 0) 81.38%,
+      rgb(202 243 255 / 0.18) 105.05%
+    ),
+    linear-gradient(
+      221deg,
+      rgb(1 101 223 / 0.55) -3.69%,
+      rgb(1 101 223 / 0) 64.84%
+    );
+  --stb-gradient-linear-800: linear-gradient(
+      180deg,
+      rgba(var(--stb-brand-600) / 0.88) 0%,
+      rgba(var(--stb-brand-400) / 0.88) 100%
+    ),
+    rgb(var(--stb-brand-600));
+  --stb-gradient-radial-850: radial-gradient(
+    69.99% 176.39% at 52.15% 111.11%,
+    rgb(var(--stb-brand-250)) 0%,
+    rgb(82 137 255 / 0) 58.36%
+  );
+  --stb-gradient-linear-900: linear-gradient(
+    270deg,
+    rgb(var(--stb-brand-400)) 49.6%,
+    rgb(15 0 223 / 0) 100%
+  );
+  --stb-gradient-linear-950: linear-gradient(
+    270deg,
+    rgb(1 101 223 / 0) 0%,
+    rgb(var(--stb-brand-300)) 50.4%
+  );
+  --stb-gradient-linear-960: linear-gradient(
+    270deg,
+    rgb(var(--stb-brand-300) / 0.64) 13.5%,
+    rgb(var(--stb-brand-300) / 0) 100%
+  );
+  --stb-gradient-linear-1000: linear-gradient(
+    270deg,
+    rgb(var(--stb-neutral-550)) 49.6%,
+    rgb(49 57 100 / 0) 100%
+  );
+  --stb-gradient-linear-1010: linear-gradient(
+    270deg,
+    rgb(49 57 100 / 0.6) 49.6%,
+    rgb(49 57 100 / 0.12) 100%
+  );
+  --stb-gradient-linear-1020: linear-gradient(
+      270deg,
+      rgb(var(--stb-neutral-550) / 0.12) 24%,
+      rgb(var(--stb-neutral-550) / 0.64) 100%
+    ),
+    rgb(var(--stb-neutral-1000));
+  --stb-gradient-linear-1030: linear-gradient(
+      270deg,
+      rgb(var(--stb-neutral-550) / 0.12) 24%,
+      rgb(var(--stb-green-450) / 0.2) 100%
+    ),
+    rgb(var(--stb-neutral-1000));
+  --stb-gradient-linear-1040: linear-gradient(
+      270deg,
+      rgb(var(--stb-neutral-550) / 0.12) 24%,
+      rgb(var(--stb-red-500) / 0.2) 100%
+    ),
+    rgb(var(--stb-neutral-1000));
+  --stb-gradient-linear-1050: linear-gradient(
+      270deg,
+      rgb(var(--stb-neutral-550) / 0.12) 24%,
+      rgb(var(--stb-brand-190) / 0.2) 100%
+    ),
+    rgb(var(--stb-neutral-1000));
+  --stb-gradient-linear-1060: linear-gradient(
+      270deg,
+      rgb(var(--stb-neutral-550) / 0.12) 24%,
+      rgb(var(--stb-yellow-500) / 0.16) 100%
+    ),
+    rgb(var(--stb-neutral-1000));
+  --stb-gradient-linear-1100: linear-gradient(
+    270deg,
+    rgb(var(--stb-green-500)) 49.6%,
+    rgb(0 255 115 / 0) 100%
+  );
+  --stb-gradient-linear-1150: linear-gradient(
+    270deg,
+    rgb(0 223 130 / 0) 0%,
+    rgb(var(--stb-green-450)) 50.4%
+  );
+  --stb-gradient-linear-1200: linear-gradient(
+    270deg,
+    rgb(var(--stb-red-500)) 49.6%,
+    rgb(230 106 135 / 0) 100%
+  );
+  --stb-gradient-linear-1300: linear-gradient(
+    270deg,
+    rgb(var(--stb-yellow-500)) 49.6%,
+    rgb(225 217 59 / 0) 100%
+  );
+  --stb-gradient-linear-1400: linear-gradient(
+    270deg,
+    rgb(var(--stb-red-950)) 0%,
+    rgb(var(--stb-red-900)) 100%
+  );
+  --stb-gradient-linear-1500: linear-gradient(
+    270deg,
+    rgb(var(--stb-green-600)) 0%,
+    rgb(var(--stb-green-500)) 50%,
+    rgb(var(--stb-green-600)) 100%
+  );
+  --stb-gradient-linear-1550: linear-gradient(
+    270deg,
+    rgb(0 170 99 / 0.22) 0%,
+    rgb(28 255 131 / 0.22) 50%,
+    rgb(0 170 99 / 0.22) 100%
+  );
+  --stb-gradient-radial-1600: radial-gradient(
+    96.89% 149.35% at 51.04% 100%,
+    #99ffd5 0%,
+    rgb(88 255 185 / 0) 58.36%
+  );
+  --stb-gradient-radial-1625: radial-gradient(
+    59.61% 141.67% at 50.3% 95.83%,
+    #58ffb9 0%,
+    rgb(153 255 213 / 0) 60%
+  );
+  --stb-gradient-radial-1650: radial-gradient(
+    79.23% 112.67% at 50% 8.52%,
+    rgb(45 45 77 / 0.64) 0%,
+    rgb(17 19 42 / 0.64) 100%
+  );
+  --stb-gradient-linear-1700: linear-gradient(
+    270deg,
+    #036210 20%,
+    #18e173 50%,
+    #036210 80%
+  );
+  --stb-gradient-linear-1800: linear-gradient(
+    0deg,
+    #0d061d 0%,
+    #0f123b 45.5%,
+    #0d061d 100%
+  );
+  --stb-gradient-linear-1900: linear-gradient(
+      90deg,
+      rgb(14 15 29 / 0.44) 0%,
+      rgb(14 15 29 / 0) 24.83%
+    ),
+    linear-gradient(270deg, #2753ea 0%, #007bf7 50%, #2753ea 100%);
+  --stb-gradient-linear-1950: linear-gradient(
+    90deg,
+    rgb(24 62 189 / 0) 83.44%,
+    #58ffb9 100%
+  );
+  --stb-gradient-radial-2000: url(/assets/images/_global/noise.png) repeat,
+    radial-gradient(79.35% 92.97% at 49.93% 7.03%, #272744 0%, #151940 100%);
+  --stb-gradient-radial-2025: radial-gradient(
+    79.35% 92.97% at 49.93% 7.03%,
+    #272744 0%,
+    #151940 100%
+  );
+  --stb-gradient-linear-2050: linear-gradient(
+    180deg,
+    rgb(13 6 29 / 0) 0%,
+    #0d061d 100%
+  );
+  --stb-gradient-linear-2100: linear-gradient(
+    270deg,
+    rgb(13 6 29 / 0) 0%,
+    #0d061d 100%
+  );
+  --stb-gradient-radial-2150: radial-gradient(
+    73.49% 176.39% at 50.3% 111.11%,
+    rgb(56 52 101 / 0.4) 0%,
+    rgb(56 52 101 / 0) 60%
+  );
+  --stb-gradient-radial-2200: linear-gradient(
+    270deg,
+    rgb(45 45 77 / 0.12) 0%,
+    rgb(20 23 52 / 0.12) 50.06%,
+    rgb(45 45 77 / 0.12) 100.12%
+  );
+  --stb-gradient-linear-2250: linear-gradient(
+    0deg,
+    #161830 0%,
+    #191a37 74.11%,
+    #161830 100%
+  );
+  --stb-gradient-radial-2300: radial-gradient(
+    48424.69% 141.42% at 0% 0%,
+    rgb(45 45 77 / 0.4) 0%,
+    #141734 100%
+  );
+  --stb-gradient-linear-2400: linear-gradient(
+    151deg,
+    #3e3f5a -1.26%,
+    #192764 31.61%,
+    #3e3f5a 63.83%
+  );
+  --stb-gradient-radial-2500: radial-gradient(
+    207% 90.81% at 103.33% -7.03%,
+    #183ebd 0%,
+    #3e3f5a 100%
+  );
+  --stb-gradient-radial-2600: radial-gradient(
+    80.68% 80.68% at 51.14% 50%,
+    rgb(var(--stb-brand-195)) 0%,
+    rgb(var(--stb-brand-300)) 100%
+  );
+  --stb-gradient-radial-2650: linear-gradient(
+    180deg,
+    rgb(var(--stb-neutral-900)) 0.19%,
+    rgb(var(--stb-brand-700)) 99.81%
+  );
+  --stb-gradient-linear-2700: linear-gradient(180deg, #06164e 0%, #021b6f 100%);
+  --stb-gradient-linear-2800: linear-gradient(
+    180.19deg,
+    rgb(var(--stb-green-500)) -55.2%,
+    rgb(var(--stb-green-600)) 100.52%
+  );
+  --stb-gradient-linear-2850: linear-gradient(
+    181.23deg,
+    rgb(var(--stb-green-600)) 1.46%,
+    rgb(var(--stb-green-500)) 99.97%
+  );
+  --stb-gradient-linear-2900: linear-gradient(
+    270deg,
+    rgb(var(--stb-red-950)) 0%,
+    rgb(var(--stb-red-900)) 50%,
+    rgb(var(--stb-red-950)) 100%
+  );
+  --stb-gradient-linear-3100: linear-gradient(
+    181.17deg,
+    rgb(var(--stb-neutral-700)) -4.73%,
+    rgb(var(--stb-neutral-550)) 100%
+  );
+  --stb-gradient-linear-3200: linear-gradient(
+    181.17deg,
+    rgb(var(--stb-red-550)) -4.73%,
+    rgb(var(--stb-red-500)) 100%
+  );
+  --stb-gradient-linear-3250: linear-gradient(
+    181.17deg,
+    rgb(var(--stb-red-500)) -4.73%,
+    rgb(var(--stb-red-550)) 100%
+  );
+  --stb-gradient-linear-3400: linear-gradient(
+    181.17deg,
+    rgb(var(--stb-yellow-600)) -4.73%,
+    rgb(var(--stb-yellow-500)) 100%
+  );
+  --stb-gradient-stroke-100: linear-gradient(
+      53deg,
+      rgb(var(--stb-brand-120) / 0.88),
+      rgb(var(--stb-brand-120) / 0) 89.87% 100%
+    ),
+    radial-gradient(
+      207% 90.81% at 103.33% -7.03%,
+      #01b3df 0%,
+      rgb(1 179 223 / 0) 100%
+    ),
+    radial-gradient(
+      173.96% 81.66% at 59.34% 50%,
+      rgb(17 23 56 / 0) 0%,
+      #111738 100%
+    );
+  --stb-gradient-stroke-400: linear-gradient(
+    234.86deg,
+    rgb(var(--stb-brand-190)) 29%,
+    rgb(var(--stb-brand-200)) 88.55%
+  );
+  --stb-gradient-stroke-500: linear-gradient(
+    80.56deg,
+    rgb(var(--stb-green-700)) 5.89%,
+    rgb(var(--stb-green-500)) 107.65%
+  );
+  --stb-gradient-stroke-550: linear-gradient(
+    136.71deg,
+    rgb(var(--stb-green-700)) -7.96%,
+    rgb(var(--stb-green-500)) 111.18%
+  );
+  --stb-gradient-stroke-600: var(--stb-gradient-linear-2900);
+  --stb-gradient-stroke-700: linear-gradient(
+    288.87deg,
+    rgb(var(--stb-neutral-550)) 16.02%,
+    #212533 97.19%
+  );
+  --stb-gradient-stroke-800: linear-gradient(
+    285.64deg,
+    rgb(var(--stb-red-500)) 15.34%,
+    rgb(var(--stb-red-800)) 96.8%
+  );
+  --stb-gradient-stroke-900: linear-gradient(
+    285.64deg,
+    rgb(var(--stb-yellow-500)) 16.6%,
+    rgb(var(--stb-yellow-800)) 98.06%
+  );
+
+  // shadow
+  --stb-shadow-100: 0 0 4px 1px rgb(var(--stb-neutral-900) / 0.64) inset;
+  --stb-shadow-200: 0 2px 0 0 rgb(var(--stb-neutral-900));
+  --stb-shadow-300: 0 2px 1px 0 rgb(var(--stb-neutral-950) / 0.66);
+  --stb-shadow-400: 2px -2px 6px 0 rgb(19 20 43 / 0.68) inset;
+  --stb-shadow-500: 3px 2px 8px 4px rgb(7 8 29 / 0.15) inset;
+
+  --stb-complex-shadow-100: var(--stb-shadow-300), var(--stb-shadow-400),
+    var(--stb-shadow-500);
+  --stb-complex-shadow-200: var(--stb-shadow-400), var(--stb-shadow-500);
+
+  // PATTERNS
+  --stb-button-background-pattern-image-primary: url("/app/img/pattern-primary.png");
+  --stb-button-background-pattern-image-secondary: url("/assets/images/buttons-bg/pattern-secondary.png");
+  --stb-button-background-pattern-image-quaternary: url("/assets/images/buttons-bg/pattern-quaternary.png");
+  --stb-button-background-pattern-image-quaternary-hover: url("/assets/images/buttons-bg/pattern-quaternary-state.jpg");
+
+  // CLIP PATHS
+  --stb-button-clip-path-rhomb: none;
+  --stb-button-clip-path-chevron: polygon(
+    100% 0%,
+    100% 76%,
+    59% 100%,
+    0% 100%,
+    0% 0
+  );
+}

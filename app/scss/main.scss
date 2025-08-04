@@ -4,6 +4,7 @@
 @import "fonts";
 @import "libs";
 @import "media";
+@import "palette";
 
 * {
   margin: 0;
@@ -191,5 +192,253 @@ body {
       auto-fill,
       minmax(100px, 1fr) minmax(150px, 2fr)
     );
+  }
+}
+
+.button-container {
+  max-width: 450px;
+  border: 1px solid #000;
+  margin-top: 50px;
+  padding: 50px;
+  // background: #000;
+  background: #0e0f1d;
+  // background: radial-gradient(
+  //   79.23% 92.97% at 50% 7.03%,
+  //   #2d2d4d 0%,
+  //   #141734 100%
+  // );
+}
+
+.button-tertiary {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin: 0;
+  padding: 8px 16px;
+  text-align: center;
+  font-family: "TT Supermolot Neue Trl Variable", "Arial", sans-serif;
+  font-variation-settings: "slnt" 0;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.2;
+  font-stretch: 150%;
+  letter-spacing: 0.56px;
+  color: #eff2f5;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #313964;
+  background-color: unset;
+  cursor: pointer;
+  outline: none;
+  text-shadow: 0.8px calc(0.8px * -1) 0 #2d2d4d,
+    calc(0.8px * -1) calc(0.8px * -1) 0 #2d2d4d,
+    calc(0.8px * -1) 0.8px 0 #2d2d4d, 0.8px 0.8px 0 #2d2d4d,
+    0.8px 1.8px 0 #11132a, calc(0.8px * -1) 1.8px 0 #11132a;
+
+  &:before,
+  &::after {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+  }
+
+  &::before {
+    background: radial-gradient(
+      93.41% 68.63% at 25.18% 31.37%,
+      #3e3f5a 0%,
+      #2d2d4d 100%
+    );
+  }
+
+  &::after {
+    background: radial-gradient(
+      79.23% 92.97% at 50% 7.03%,
+      #2d2d4d 0%,
+      #141734 100%
+    );
+    opacity: var(--stb-sym-button-opacity, 0);
+    transition: opacity 200ms;
+  }
+
+  &:hover {
+    --stb-sym-button-opacity: 1;
+  }
+}
+
+.button-primary {
+  --stb-button-background-pattern-image: url("../img/pattern-primary.png");
+  --stb-button-background-transparent-layer: var(--stb-gradient-linear-1550);
+  --stb-button-background-shadow: var(--stb-gradient-radial-1600);
+  --stb-button-background: var(--stb-button-primary);
+  --stb-button-background-hover: var(--stb-button-primary-hover);
+  --stb-button-shadow-inside: rgb(var(--stb-green-500));
+  --stb-button-shadow-outside: rgb(var(--stb-neutral-900));
+  --stb-button-border: rgb(var(--stb-green-700));
+  --stb-button-text-stroke: rgb(var(--stb-green-400));
+  --stb-button-text-shadow: rgb(var(--stb-brand-950) / 0.88);
+  --stb-button-clip-path: polygon(
+    1.3em 0%,
+    100% 0%,
+    calc(100% - 0.4em) 75%,
+    calc(100% - 1.3em) 100%,
+    0% 100%,
+    0.4em 25%
+  );
+
+  position: relative;
+  // inset: 0 0 2;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin: 0;
+  padding: 8px 16px;
+  text-align: center;
+  font-family: "TT Supermolot Neue Trl Variable", "Arial", sans-serif;
+  font-variation-settings: "slnt" 0;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.2;
+  font-stretch: 150%;
+  letter-spacing: 0.56px;
+  color: var(--stb-text-contrast-primary);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--stb-button-border);
+  clip-path: var(--stb-button-clip-path);
+  text-shadow: var(--stb-text-stroke-width, 0.8px)
+      calc(var(--stb-text-stroke-width, 0.8px) * -1) 0
+      var(--stb-button-text-stroke),
+    calc(var(--stb-text-stroke-width, 0.8px) * -1)
+      calc(var(--stb-text-stroke-width, 0.8px) * -1) 0
+      var(--stb-button-text-stroke),
+    calc(var(--stb-text-stroke-width, 0.8px) * -1)
+      var(--stb-text-stroke-width, 0.8px) 0 var(--stb-button-text-stroke),
+    var(--stb-text-stroke-width, 0.8px) var(--stb-text-stroke-width, 0.8px) 0
+      var(--stb-button-text-stroke),
+    var(--stb-text-stroke-width, 0.8px) var(--stb-text-shadow-width, 1.8px) 0
+      var(--stb-button-text-shadow),
+    calc(var(--stb-text-stroke-width, 0.8px) * -1)
+      var(--stb-text-shadow-width, 1.8px) 0 var(--stb-button-text-shadow);
+
+      text-shadow: var(--stb-text-stroke-width, 0.8px)
+      calc(var(--stb-text-stroke-width, 0.8px) * -1) 0
+      var(--stb-button-text-stroke),
+    calc(var(--stb-text-stroke-width, 0.8px) * -1)
+      calc(var(--stb-text-stroke-width, 0.8px) * -1) 0
+      var(--stb-button-text-stroke),
+    calc(var(--stb-text-stroke-width, 0.8px) * -1)
+      var(--stb-text-stroke-width, 0.8px) 0 var(--stb-button-text-stroke),
+    var(--stb-text-stroke-width, 0.8px) var(--stb-text-stroke-width, 0.8px) 0
+      var(--stb-button-text-stroke),
+    var(--stb-text-stroke-width, 0.8px) var(--stb-text-shadow-width, 1.8px) 0
+      var(--stb-button-text-shadow),
+    calc(var(--stb-text-stroke-width, 0.8px) * -1)
+      var(--stb-text-shadow-width, 1.8px) 0 var(--stb-button-text-shadow);
+
+  transition: border-color 200ms;
+
+  &:before,
+  &::after {
+    box-sizing: border-box;
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    content: "";
+  }
+
+  &::before {
+    background: var(--stb-button-background-pattern-image) center / cover,
+      var(--stb-button-background-transparent-layer),
+      var(--stb-button-background-shadow), var(--stb-button-background);
+    clip-path: var(--stb-button-clip-path);
+  }
+
+  &::after {
+    background: var(--stb-button-background-pattern-image) center / cover,
+      var(--stb-button-background-transparent-layer),
+      var(--stb-button-background-shadow), var(--stb-button-background-hover);
+    clip-path: var(--stb-button-clip-path);
+    box-shadow: 0 0 2px var(--stb-button-shadow-inside) inset;
+    opacity: var(--stb-sym-button-opacity, 0);
+    transition: opacity 200ms;
+  }
+
+  &:hover {
+    --stb-button-border: rgb(var(--stb-green-500) / 0.7);
+    --stb-sym-button-opacity: 1;
+  }
+}
+
+.sym-a-container a.sym-button {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin: 0;
+  padding: 8px 16px;
+  text-align: center;
+  font-family: "TT Supermolot Neue Trl Variable", "Arial", sans-serif;
+  font-variation-settings: "slnt" 0;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.2;
+  font-stretch: 150%;
+  letter-spacing: 0.56px;
+  color: #eff2f5;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #313964;
+  background-color: unset;
+  cursor: pointer;
+  outline: none;
+  text-shadow: 0.8px calc(0.8px * -1) 0 #2d2d4d,
+    calc(0.8px * -1) calc(0.8px * -1) 0 #2d2d4d,
+    calc(0.8px * -1) 0.8px 0 #2d2d4d, 0.8px 0.8px 0 #2d2d4d,
+    0.8px 1.8px 0 #11132a, calc(0.8px * -1) 1.8px 0 #11132a;
+
+  &:before,
+  &::after {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+  }
+
+  &::before {
+    background: radial-gradient(
+      93.41% 68.63% at 25.18% 31.37%,
+      #3e3f5a 0%,
+      #2d2d4d 100%
+    );
+  }
+
+  &::after {
+    background: radial-gradient(
+      79.23% 92.97% at 50% 7.03%,
+      #2d2d4d 0%,
+      #141734 100%
+    );
+    opacity: var(--stb-sym-button-opacity, 0);
+    transition: opacity 200ms;
+  }
+
+  &:hover {
+    --stb-sym-button-opacity: 1;
   }
 }
