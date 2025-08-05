@@ -1,0 +1,213 @@
+:root {
+  // raw palette
+  --stb-black: 9 8 12; // #09080C
+  --stb-white: 255 255 255; // #fff
+
+  // neutral colors
+  --stb-neutral-20: 235 175 145; // #EBAF91
+  --stb-neutral-50: 223 159 127; // #DF9F7F
+  --stb-neutral-100: 210 142 108; // #D28E6C
+  --stb-neutral-150: 197 125 89; // #C57D59
+  --stb-neutral-200: 191 117 80; // #BF7550
+  --stb-neutral-300: 184 108 70; // #B86C46
+  --stb-neutral-400: 150 80 43; // #99502B
+  --stb-neutral-500: 102 53 29; // #66351D
+  --stb-neutral-600: 77 40 21; // #7B76A2
+  --stb-neutral-700: 66 34 19; // #422213
+  --stb-neutral-800: 41 21 12; // #29150C
+  --stb-neutral-850: 31 16 9; // #1F1009
+  --stb-neutral-900: 20 11 6; // #140B06
+  --stb-neutral-950: 10 5 3; // #0A0503
+  --stb-neutral-1000: 0 0 0; // #000000
+
+  // brand colors
+  --stb-brand-20: 209 151 151; // #D19797
+  --stb-brand-50: 199 138 138; // #C78A8A
+  --stb-brand-100: 189 124 124; // #BD7C7C
+  --stb-brand-150: 165 98 98; // #A56262
+  --stb-brand-200: 153 85 85; // #995555
+  --stb-brand-300: 133 74 74; // #854A4A
+  --stb-brand-400: 112 63 63; // #703F3F
+  --stb-brand-500: 97 54 54; // #613636
+  --stb-brand-600: 84 46 47; // #542E2F
+  --stb-brand-700: 71 37 39; // #472527
+  --stb-brand-800: 51 29 29; // #331D1D
+  --stb-brand-850: 41 23 23; // #291717
+  --stb-brand-900: 31 17 17; // #1F1111
+  --stb-brand-950: 24 13 13; // #180D0D
+  --stb-brand-1000: 16 9 9; // #100909
+
+  // brand-2 colors
+  --stb-brand-2-20: 152 230 215; // #98E6D7
+  --stb-brand-2-50: 139 223 206; // #8BDFCE
+  --stb-brand-2-100: 126 215 197; // #7ED7C5
+  --stb-brand-2-150: 100 199 179; // #64C7B3
+  --stb-brand-2-200: 74 184 161; // #4AB8A1
+  --stb-brand-2-300: 48 168 143; // #30A88F
+  --stb-brand-2-400: 38 130 111; // #26826F
+  --stb-brand-2-500: 32 112 96; // #207060
+  --stb-brand-2-600: 26 92 79; // #1A5C4F
+  --stb-brand-2-700: 19 71 61; // #13473D
+  --stb-brand-2-800: 14 51 44; // #0E332C
+  --stb-brand-2-850: 0 44 40; // #002C28
+  --stb-brand-2-900: 0 36 33; // #002421
+  --stb-brand-2-950: 0 31 28; // #001F1C
+  --stb-brand-2-1000: 0 23 21; // #001715
+
+  // green
+  --stb-green-100: 117 242 177; // #75F2B1
+  --stb-green-200: 42 235 132; // #2AEB84
+  --stb-green-300: 34 189 106; // #22BD6A
+  --stb-green-400: 41 172 85; // #29AC55
+  --stb-green-450: 24 133 75; // #18854B
+  --stb-green-500: 0 122 57; // #007A39
+  --stb-green-800: 15 82 46; // #0F522E
+
+  // red
+  --stb-red-400: 255 92 92; // #FF5C5C
+  --stb-red-500: 255 31 31; // #FF1F1F
+  --stb-red-600: 117 6 0; // #750600
+
+  // yellow
+  --stb-yellow-200: 235 206 150; // #EBCE96
+  --stb-yellow-300: 255 222 133; // #FFDE85
+  --stb-yellow-500: 255 187 0; // #FFBB00
+  --stb-yellow-600: 251 146 0; // #FB9200
+
+  // other
+  --stb-other-100: 217 184 146; // #D9B892
+  --stb-other-200: 109 152 143; // #6D988F
+  --stb-other-300: 59 207 177; // #3BCFB1
+  --stb-other-450: 61 29 46; // #3D1D2E
+  --stb-other-500: 46 22 35; // #2E1623
+  --stb-other-600: 41 20 31; // #29141F
+  --stb-other-700: 36 17 27; // #24111B
+  --stb-other-800: 66 37 37; // #422525
+  --stb-other-900: 126 83 63; // #7E533F
+  --stb-other-1000: 255 150 96; // #FF9660
+  --stb-other-1100: 204 116 57; // #CC7439
+  --stb-other-1200: 182 103 50; // #B66732
+  --stb-other-1300: 143 81 40; // #8F5128
+
+  // gradient
+  --stb-gradient-100: linear-gradient(
+    113.79deg,
+    rgb(var(--stb-yellow-500)) 19.35%,
+    rgb(var(--stb-yellow-300)) 47.6%,
+    rgb(var(--stb-yellow-500)) 76.72%
+  );
+
+  // semantics
+
+  // text
+  --stb-text-primary: rgb(var(--stb-yellow-200));
+  --stb-text-secondary: rgb(var(--stb-neutral-200));
+  --stb-text-contrast-primary: rgb(var(--stb-yellow-200));
+  --stb-text-contrast-secondary: rgb(var(--stb-brand-2-200));
+  --stb-text-card-contrast-secondary: rgb(var(--stb-brand-2-300));
+  --stb-text-accent: rgb(var(--stb-gradient-100));
+  --stb-text-bright: rgb(var(--stb-white));
+
+  // button
+  --stb-button-primary: rgb(var(--stb-green-300));
+  --stb-button-primary-hover: rgb(var(--stb-green-200));
+  --stb-button-primary-active: rgb(var(--stb-green-300));
+  --stb-button-secondary: rgb(var(--stb-other-1200));
+  --stb-button-secondary-hover: rgb(var(--stb-other-1000));
+  --stb-button-secondary-active: rgb(var(--stb-other-1200));
+  --stb-button-tertiary: rgb(var(--stb-brand-800));
+  --stb-button-tertiary-hover: rgb(var(--stb-brand-700));
+  --stb-button-tertiary-active: rgb(var(--stb-brand-800));
+
+  // links
+  --stb-link-primary: rgb(var(--stb-yellow-500));
+  --stb-link-secondary: rgb(var(--stb-neutral-100));
+  --stb-link-contrast-primary: rgb(var(--stb-brand-2-20));
+  --stb-link-alert: rgb(var(--stb-brand-2-200));
+
+  // background
+  --stb-bg-primary: rgb(var(--stb-other-500));
+  --stb-bg-secondary: rgb(var(--stb-brand-500));
+  --stb-bg-tertiary: rgb(var(--stb-brand-800));
+  --stb-bg-contrast-primary: rgb(var(--stb-brand-2-950));
+  --stb-bg-contrast-secondary: rgb(var(--stb-brand-2-700));
+  --stb-bg-contrast-tertiary: rgb(var(--stb-brand-2-850));
+  --stb-bg-popup: rgb(var(--stb-black) / 0.8);
+  --stb-bg-card-contrast-primary: url("/assets/images/account/events-top-decor.svg")
+      repeat-x center top/auto auto,
+    url("/assets/images/backgrounds/bg-pattern-7-green.jpg") repeat center
+      center/contain;
+
+  // input
+  --stb-input-fill: linear-gradient(
+    180deg,
+    rgb(36 20 20) 0%,
+    rgb(53 30 30) 100%
+  );
+  --stb-input-fill-hover: rgb(71 40 40);
+  --stb-input-fill-selected: rgb(var(--stb-white));
+  --stb-input-stroke: rgb(107 60 60);
+  --stb-input-stroke-hover: rgb(var(--stb-brand-500));
+  --stb-input-stroke-selected: rgb(var(--stb-brand-800));
+
+  // functional
+  --stb-functional-done: rgb(var(--stb-green-500));
+  --stb-functional-warning: rgb(var(--stb-yellow-500));
+  --stb-functional-error: rgb(var(--stb-red-500));
+  --stb-functional-alert: rgb(var(--stb-other-300));
+
+  // system
+  --stb-skeleton: linear-gradient(
+      0deg,
+      rgb(var(--stb-other-500) / 0),
+      rgb(var(--stb-other-500) / 0)
+    ),
+    linear-gradient(
+      90deg,
+      rgb(165 98 98 / 0) 0%,
+      rgb(165 98 98 / 0.2) 50%,
+      rgb(165 98 98 / 0) 100%
+    );
+
+  // new filters
+  --stb-button-text-bright-filter: invert(100%) sepia(0%) saturate(7487%)
+    hue-rotate(126deg) brightness(108%) contrast(105%);
+  --stb-button-text-middle-filter: invert(59%) sepia(22%) saturate(499%)
+    hue-rotate(207deg) brightness(89%) contrast(87%);
+  --stb-text-secondary-filter: invert(64%) sepia(11%) saturate(970%)
+    hue-rotate(207deg) brightness(85%) contrast(83%);
+  --stb-text-primary-filter: invert(30%) sepia(9%) saturate(1781%)
+    hue-rotate(207deg) brightness(97%) contrast(89%);
+  --stb-white-filter: invert(99%) sepia(3%) saturate(371%) hue-rotate(87deg)
+    brightness(115%) contrast(100%);
+  --stb-brand-500-filter: invert(58%) sepia(23%) saturate(7495%)
+    hue-rotate(217deg) brightness(103%) contrast(98%);
+  --stb-icon-400-filter: invert(58%) sepia(23%) saturate(462%)
+    hue-rotate(207deg) brightness(91%) contrast(88%);
+  --stb-filter-black: brightness(0);
+  --stb-filter-gold: invert(97%) sepia(29%) saturate(3976%) hue-rotate(308deg)
+    brightness(109%) contrast(101%);
+  --stb-filter-white: invert(77%) sepia(0%) saturate(3104%) hue-rotate(318deg)
+    brightness(88%) contrast(80%);
+  --stb-button-tertiary-loader: brightness(0) saturate(100%) invert(87%)
+    sepia(37%) saturate(434%) hue-rotate(336deg) brightness(96%) contrast(91%);
+  --stb-link-primary-filter: brightness(0) saturate(100%) invert(68%) sepia(78%)
+    saturate(1357%) hue-rotate(359deg) brightness(104%) contrast(104%);
+
+  // shadows
+  --stb-shadow-primary: 0 6px 16px rgb(37 14 61 / 0.1);
+  --stb-filter-drop-shadow: drop-shadow(-1px 6px 6px rgb(37 14 61 / 0.1));
+
+  // DVS color
+  --purple-100: 140 135 179; // #8C87B3
+  --purple-200: 82 78 114; // #524E72
+  --purple-900: 120 87 217; // #7857D9
+  --purple-1000: 131 66 237; // #8342ED
+  --blue-100: 85 201 255; // #55c9ff
+  --blue-400: 53 134 255; // #3586FF
+  --blue-500: 30 136 229; // #1e88e5;
+  --red-900: 244 67 54; // #F44336
+  --green-1000: 0 200 83; // #00C853
+  --yellow-700: 251 192 45; // #FBC02D
+  --yellow-800: 255 160 0; // #FFA000
+}
