@@ -378,6 +378,13 @@ body {
   &:hover {
     --stb-button-border: rgb(var(--stb-green-500) / 0.7);
     --stb-sym-button-opacity: 1;
+    --stb-button-text-shadow: transparent;
+  }
+
+  &:active {
+    --stb-button-border: rgb(var(--stb-green-500) / .7);
+    --stb-button-shadow-outside: transparent;
+    --stb-button-text-shadow: transparent;
   }
 }
 
