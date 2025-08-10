@@ -31,82 +31,84 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1 class="title">Trainee Tasks</h1>
-      <h2>Grids</h2>
-
-      <div class="grid-container">
-        <div class="grid grid--1">
-          <div class="box box--A">text A</div>
-          <div class="box box--B">text B</div>
-          <div class="box box--C">text C</div>
-          <div class="box box--D">text D</div>
+    <h1>Subgrid in practice: align article internals to page columns</h1>
+    <p class="intro">
+      The page has 3 columns (sidebar / content / meta). Each post inherits the
+      right two columns via
+      <code>grid-template-columns: subgrid</code>, so its avatar, title, date,
+      and stats line up perfectly across posts.
+    </p>
+    <div class="page" id="page">
+      <aside class="sidebar">
+        <strong>Sidebar</strong>
+        <ul>
+          <li>Home</li>
+          <li>Topics</li>
+          <li>Bookmarks</li>
+        </ul>
+        <button id="toggle">Toggle column guides</button>
+      </aside>
+      <!-- POST 1 -->
+      <article class="post">
+        <img class="avatar" src="https://picsum.photos/seed/a/112" alt="" />
+        <h2 class="title">Design tokens that survive redesigns</h2>
+        <time class="date">Aug 10, 2025</time>
+        <p class="excerpt">
+          We refactored tokens and aligned components to a two-column reading
+          grid. With subgrid, meta blocks stay locked to the right column
+          regardless of content length.
+        </p>
+        <div class="tags">
+          <span class="tag">Design</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Architecture</span>
         </div>
-
-        <div class="grid grid--2">
-          <div class="box box--A">text A</div>
-          <div class="box box--B">text B</div>
-          <div class="box box--C">text C</div>
-          <div class="box box--D">text D</div>
-          <div class="box box--E">text E</div>
+        <div class="stats">8 min • 1.2k views</div>
+      </article>
+      <!-- POST 2 -->
+      <article class="post">
+        <img class="avatar" src="https://picsum.photos/seed/b/112" alt="" />
+        <h2 class="title">Animating layout without jank</h2>
+        <time class="date">Aug 02, 2025</time>
+        <p class="excerpt">
+          Use transform/opacity for animations and keep heavy elements in their
+          own layers. Subgrid helps keep titles and timestamps aligned while
+          content size changes.
+        </p>
+        <div class="tags">
+          <span class="tag">Performance</span>
+          <span class="tag">Grid</span>
         </div>
-
-        <div class="grid grid--3">
-          <div class="box box--A">text A</div>
-          <div class="box box--B">text B</div>
-          <div class="box box--C">text C</div>
-          <div class="box box--D">text D</div>
-          <div class="box box--E">text E</div>
+        <div class="stats">5 min • 980 views</div>
+      </article>
+      <!-- POST 3 -->
+      <article class="post">
+        <img class="avatar" src="https://picsum.photos/seed/c/112" alt="" />
+        <h2 class="title">
+          When nested grids should become subgrids for consistent column rhythm
+          across modules
+        </h2>
+        <time class="date">Jul 28, 2025</time>
+        <p class="excerpt">
+          On long lists, independent nested grids drift out of alignment.
+          Switching to <code>subgrid</code> keeps the “meta” column (date &
+          stats) pinned, while the “content” column remains fluid for any text
+          length.
+        </p>
+        <div class="tags">
+          <span class="tag">Layout</span>
+          <span class="tag">Best practices</span>
+          <span class="tag">Frontend</span>
         </div>
-
-        <div class="grid grid--4">
-          <div class="box box--A">text A</div>
-          <div class="box box--B">text B</div>
-          <div class="box box--C">text C</div>
-          <div class="box box--D">text D</div>
-          <!-- <div class="box box--E">text E</div> -->
-        </div>
-
-        <div class="grid grid--5">
-          <div class="box box--1">text 01</div>
-          <div class="box box--2">text 02</div>
-          <div class="box box--3">text 03</div>
-          <div class="box box--4">text 04</div>
-          <div class="box box--5">text 05</div>
-          <div class="box box--6">text 06</div>
-          <div class="box box--7">text 07</div>
-          <div class="box box--8">text 08</div>
-          <div class="box box--9">text 09</div>
-          <div class="box box--10">text 10</div>
-          <div class="box box--11">text 11</div>
-          <div class="box box--12">text 12</div>
-        </div>
-
-        <div class="grid grid--6">
-          <div class="box box--A">text A</div>
-          <div class="box box--B">text B</div>
-          <div class="box box--C">text C</div>
-          <div class="box box--D">text D</div>
-          <div class="box box--E">text E</div>
-        </div>
-
-        <div class="grid grid--7">
-          <div class="box box--1">text 01</div>
-          <div class="box box--2">text 02</div>
-          <div class="box box--3">text 03</div>
-          <div class="box box--4">text 04</div>
-          <div class="box box--5">text 05</div>
-          <div class="box box--6">text 06</div>
-          <div class="box box--7">text 07</div>
-          <div class="box box--8">text 08</div>
-          <div class="box box--9">text 09</div>
-          <div class="box box--10">text 10</div>
-          <div class="box box--11">text 11</div>
-          <div class="box box--12">text 12</div>
-        </div>
-      </div>
+        <div class="stats">12 min • 3.4k views</div>
+      </article>
     </div>
-
     <script src="js/scripts.min.js"></script>
+    <script>
+      const page = document.getElementById("page");
+      document.getElementById("toggle").addEventListener("click", () => {
+        page.classList.toggle("show-lines");
+      });
+    </script>
   </body>
 </html>
